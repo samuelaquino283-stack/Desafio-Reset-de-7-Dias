@@ -3,745 +3,870 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LEVE° — Emagrecimento definitivo, sem sofrimento</title>
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/600.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/700.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/900.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/700-italic.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/900-italic.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/400.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/500.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/600.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/700.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/800.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/space-mono@5/400.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/@fontsource/space-mono@5/700.css" rel="stylesheet">
+<title>Desafio Reset de 7 Dias — Perca até 5kg em 7 dias</title>
+<meta name="description" content="O guia prático de 7 dias que te faz perder até 5kg sem dietas loucas, sem passar fome e sem academia. Uma orientação por dia. Garantia de 7 dias.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23170807'/%3E%3Ctext x='32' y='46' font-size='36' font-family='Arial' font-weight='bold' fill='%23E8503A' text-anchor='middle'%3E7%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/bricolage-grotesque@latest/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/instrument-sans@latest/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/fraunces@latest/index-italic.css">
 <style>
 :root{
-  --cream:#f7f1e6; --cream2:#efe5d3; --paper:#fffdf7;
-  --ink:#1b2a22; --ink2:#42544a; --mut:#6d7c71;
-  --green:#1e5b3f; --green-d:#113527; --leaf:#3e8e5e; --lime:#b9d18a;
-  --citrus:#f4622e; --sun:#f2b23e; --sky:#77a9cf; --rust:#e2582f;
-  --disp:'Fraunces',serif; --body:'Manrope',sans-serif; --mono:'Space Mono',monospace;
-  --sh:0 18px 44px -18px rgba(27,42,34,.25);
+  --ink:#170807;
+  --pine:#2B0D0B;
+  --pine-2:#3A1210;
+  --moss:#9A2417;
+  --cream:#F7F1E9;
+  --cream2:#F0E4DA;
+  --blood:#C4271B;
+  --blood-bright:#E8503A;
+  --ember:#FF7A50;
+  --line:rgba(23,8,7,.14);
+  --line-light:rgba(247,241,233,.16);
+  --font-display:'Bricolage Grotesque Variable',sans-serif;
+  --font-body:'Instrument Sans Variable',sans-serif;
+  --font-accent:'Fraunces Variable',Georgia,serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:92px}
-body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.65;overflow-x:hidden}
-::selection{background:var(--citrus);color:#fff}
-::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--cream2)}
-::-webkit-scrollbar-thumb{background:var(--green);border-radius:6px}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-h1,h2,h3{font-family:var(--disp);line-height:1.04;letter-spacing:-.01em}
-h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900}
-h2 em,h1 em{font-style:italic;color:var(--citrus)}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--leaf);display:flex;align-items:center;gap:.7rem;font-weight:700}
-.kicker::before{content:"";width:26px;height:2px;background:var(--citrus)}
-.sec-head{margin-bottom:2.8rem}
-.sec-head p.sub{color:var(--mut);max-width:56ch;margin-top:.9rem}
-.sec{padding:6rem 0}
-.noise{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.045;
- background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-#prog{position:fixed;top:0;left:0;height:3px;background:var(--citrus);width:0;z-index:90}
+button{font-family:inherit;cursor:pointer}
+section{scroll-margin-top:120px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.display{font-family:var(--font-display);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+em{font-family:var(--font-accent);font-style:italic;font-weight:600;color:var(--blood);letter-spacing:0}
+.dark em{color:var(--ember)}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--moss);margin-bottom:14px}
+.dark .eyebrow{color:var(--ember)}
+h2{font-size:clamp(1.9rem,4.2vw,3rem);margin-bottom:16px}
+.lead{font-size:1.08rem;color:rgba(23,8,7,.75);max-width:56ch}
+.dark .lead{color:rgba(247,241,233,.75)}
+::selection{background:var(--blood);color:var(--cream)}
+body::-webkit-scrollbar{width:10px}
+body::-webkit-scrollbar-track{background:var(--cream2)}
+body::-webkit-scrollbar-thumb{background:linear-gradient(var(--blood),var(--pine));border-radius:6px}
 
-/* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:70;transition:background .3s,box-shadow .3s;background:transparent}
-nav.scrolled{background:rgba(247,241,230,.9);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(27,42,34,.12)}
-.nav-in{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:2rem}
-.logo{font-family:var(--disp);font-weight:900;font-size:1.5rem;letter-spacing:-.02em;display:flex;align-items:baseline;gap:.15rem}
-.logo i{font-style:normal;color:var(--citrus)}
-.nav-links{display:flex;gap:1.7rem;margin-left:auto;font-weight:700;font-size:.88rem;color:var(--ink2)}
-.nav-links a{position:relative}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;height:2px;width:0;background:var(--citrus);transition:width .3s}
-.nav-links a:hover{color:var(--ink)}.nav-links a:hover::after{width:100%}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:99px;padding:.85rem 1.7rem;font-family:var(--body);font-weight:800;font-size:.93rem;border:none;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
-.btn .ar{transition:transform .25s}
-.btn:hover .ar{transform:translateX(4px)}
-.btn-p{background:var(--green);color:#fdf9ee;box-shadow:0 10px 26px -12px rgba(30,91,63,.7)}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(30,91,63,.85)}
-.btn-c{background:var(--citrus);color:#fff;box-shadow:0 10px 26px -12px rgba(244,98,46,.7)}
-.btn-c:hover{transform:translateY(-2px)}
-.btn-o{background:transparent;border:2px solid var(--green);color:var(--green)}
-.btn-o:hover{background:var(--green);color:#fdf9ee}
-.burger{display:none;margin-left:auto;background:none;border:2px solid var(--green);border-radius:10px;color:var(--green);padding:.4rem .65rem;cursor:pointer;font-size:1rem;font-weight:800}
-@media(max-width:920px){.nav-links,.nav-cta{display:none}.burger{display:block}
- nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);padding:1.4rem 24px;gap:1.1rem;box-shadow:var(--sh)}}
+/* ---------- noise ---------- */
+body::after{content:"";position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-/* hero */
-.hero{padding:150px 0 4.5rem;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-220px;right:-220px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(244,98,46,.14),transparent 65%)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center;position:relative}
-.hero h1{font-size:clamp(3rem,7vw,5.4rem);font-weight:900;margin:1.4rem 0 1.3rem}
+/* ---------- topbar urgência ---------- */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:60;height:50px;background:linear-gradient(90deg,#120505,var(--pine) 55%,#4A150E);color:var(--cream);display:flex;justify-content:center;align-items:center;gap:18px;padding:0 16px;border-bottom:1px solid rgba(232,80,58,.25)}
+.tb-item{display:flex;align-items:center;gap:9px}
+.tb-txt{font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,241,233,.8)}
+.tb-live .dot{width:7px;height:7px;border-radius:50%;background:var(--blood-bright);animation:pulse 1.6s infinite}
+.tb-vagas b{color:var(--ember);font-size:.95rem;display:inline-block}
+.tb-bar{width:74px;height:5px;border-radius:99px;background:rgba(247,241,233,.14);overflow:hidden;display:inline-block}
+.tb-bar i{display:block;height:100%;width:85%;background:linear-gradient(90deg,var(--blood),var(--ember));border-radius:99px;transition:width .8s cubic-bezier(.2,.7,.2,1)}
+.tb-sep{width:1px;height:18px;background:rgba(247,241,233,.18)}
+.tiles{display:flex;align-items:center;gap:4px}
+.tiles i{font-style:normal;color:var(--ember);font-weight:800;font-size:.8rem;animation:blink 1s steps(2) infinite}
+.tile{background:rgba(247,241,233,.09);border:1px solid rgba(232,80,58,.3);border-radius:7px;padding:3px 7px;box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.tile b{font-family:var(--font-display);font-weight:800;font-size:.85rem;color:var(--cream);font-variant-numeric:tabular-nums;display:inline-block;line-height:1.1}
+@keyframes blink{50%{opacity:.25}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,80,58,.55)}50%{box-shadow:0 0 0 7px rgba(232,80,58,0)}}
+@keyframes tick{0%{transform:translateY(0);opacity:1}45%{transform:translateY(.65em);opacity:0}55%{transform:translateY(-.65em);opacity:0}100%{transform:translateY(0);opacity:1}}
+.tick{animation:tick .5s cubic-bezier(.3,.7,.3,1)}
+.bump{animation:bump .5s}
+@keyframes bump{40%{transform:scale(1.4);color:var(--ember)}}
+@media(max-width:820px){.tb-live,.tb-sep{display:none}.topbar{gap:12px}}
+@media(max-width:480px){.tb-txt{font-size:.62rem}.tb-bar{width:48px}}
+
+/* ---------- header ---------- */
+header{position:fixed;top:50px;left:0;right:0;z-index:50;transition:background .35s,box-shadow .35s,padding .35s;padding:16px 0}
+header.scrolled{background:rgba(247,241,233,.93);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em;display:flex;align-items:center;gap:7px}
+.logo svg{width:17px;height:17px;stroke:var(--blood);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.logo span{color:var(--blood)}
+.nav-links{display:flex;gap:26px;font-size:.86rem;font-weight:600;letter-spacing:.04em}
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--blood);transition:width .3s}
+.nav-links a:hover::after{width:100%}
+@media(max-width:960px){.nav-links{display:none}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;border:none;border-radius:999px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;transition:box-shadow .3s,background .3s,transform .3s;will-change:transform}
+.btn-primary{background:var(--blood);color:var(--cream);padding:18px 34px;font-size:.95rem;box-shadow:0 10px 30px rgba(196,39,27,.35)}
+.btn-primary:hover{box-shadow:0 16px 44px rgba(196,39,27,.55);background:#d8352a}
+.btn-primary .btn-arrow{transition:transform .3s}
+.btn-primary:hover .btn-arrow{transform:translateX(5px)}
+.btn-primary.pulse{animation:ctaPulse 2.6s infinite}
+@keyframes ctaPulse{0%{box-shadow:0 10px 30px rgba(196,39,27,.35),0 0 0 0 rgba(196,39,27,.45)}70%{box-shadow:0 10px 30px rgba(196,39,27,.35),0 0 0 20px rgba(196,39,27,0)}100%{box-shadow:0 10px 30px rgba(196,39,27,.35),0 0 0 0 rgba(196,39,27,0)}}
+.btn-sm{padding:11px 22px;font-size:.78rem}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- hero ---------- */
+.hero{padding:185px 0 90px;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 420px at 88% 6%,rgba(196,39,27,.13),transparent 65%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.14em;background:var(--ink);color:var(--cream);padding:8px 16px;border-radius:999px;margin-bottom:22px}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--blood-bright);animation:pulse 1.6s infinite}
+.hero-badge b{color:var(--ember)}
+.hero .eyebrow{font-size:.85rem;color:var(--blood);min-height:1.2em}
+.hero-title{font-size:clamp(2.5rem,5.6vw,4.3rem);margin-bottom:24px}
 .lm{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
-.lm-i{display:inline-block;transform:translateY(115%);transition:transform 1s cubic-bezier(.2,.75,.2,1);transition-delay:var(--d,0s)}
-body.loaded .lm-i{transform:none}
-.hero-sub{color:var(--ink2);max-width:50ch;font-size:1.05rem}
-.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin:1.9rem 0 2.4rem}
-.hero-stats{display:flex;gap:2.4rem;flex-wrap:wrap}
-.hstat .n{font-family:var(--disp);font-weight:900;font-size:1.6rem}
-.hstat .n b{color:var(--citrus)}
-.hstat .l{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.leaf-deco{position:absolute;animation:sway 6s ease-in-out infinite}
-@keyframes sway{50%{transform:rotate(8deg) translateY(-8px)}}
+.lm-inner{display:block;transform:translateY(112%);transition:transform 1s cubic-bezier(.2,.75,.2,1)}
+body.on .lm:nth-child(1) .lm-inner{transition-delay:.1s;transform:none}
+body.on .lm:nth-child(2) .lm-inner{transition-delay:.22s;transform:none}
+body.on .lm:nth-child(3) .lm-inner{transition-delay:.34s;transform:none}
+.hero-desc{font-size:1.06rem;color:rgba(23,8,7,.78);max-width:54ch;margin-bottom:32px}
+.hero-desc strong{color:var(--ink)}
+.hero-cta{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.hero-note{font-size:.85rem;color:rgba(23,8,7,.65);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.stars{color:var(--blood-bright);letter-spacing:2px}
+.hero-visual{position:relative}
+.stack-img{border-radius:18px;box-shadow:0 40px 80px rgba(23,8,7,.3);animation:floaty 7s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(-.6deg)}}
+.float-chip{position:absolute;background:var(--ink);color:var(--cream);border-radius:14px;padding:12px 18px;font-family:var(--font-display);font-weight:800;font-size:1.15rem;line-height:1.1;box-shadow:0 16px 40px rgba(23,8,7,.35);animation:floaty 6s ease-in-out infinite}
+.float-chip small{font-family:var(--font-body);font-weight:600;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ember)}
+.chip-a{top:-22px;left:-26px;animation-delay:.8s;border:2px solid var(--blood)}
+.chip-b{bottom:-20px;right:-14px;animation-delay:1.6s}
+@media(max-width:900px){.hero{padding-top:165px}.hero-grid{grid-template-columns:1fr;gap:50px}.hero-visual{max-width:480px}.chip-a{left:-8px}.chip-b{right:-4px}}
 
-/* IMC card */
-.imc-card{background:var(--paper);border:2px solid var(--ink);border-radius:20px;padding:1.8rem;box-shadow:8px 8px 0 var(--sun);position:relative;transform:rotate(1.2deg)}
-.imc-head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:1.2rem}
-.imc-head b{color:var(--leaf)}
-.gauge{position:relative;width:230px;height:115px;margin:0 auto;border-radius:230px 230px 0 0;
- background:conic-gradient(from -90deg at 50% 100%,var(--sky) 0 25.2deg,var(--leaf) 25.2deg 72deg,var(--sun) 72deg 108deg,var(--rust) 108deg 180deg,transparent 180deg 360deg)}
-.gauge-in{position:absolute;left:36px;right:36px;top:36px;bottom:0;border-radius:230px 230px 0 0;background:var(--paper)}
-.needle{position:absolute;left:50%;bottom:0;width:4px;height:88px;background:var(--ink);border-radius:4px;transform-origin:50% 100%;transform:translateX(-50%) rotate(17deg);transition:transform .8s cubic-bezier(.3,1.4,.4,1)}
-.needle::after{content:"";position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--citrus);border:3px solid var(--ink)}
-.gauge-val{text-align:center;margin-top:.7rem;font-family:var(--disp);font-weight:900;font-size:2.4rem;line-height:1}
-.gauge-val small{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;color:var(--mut);display:block;margin-top:.2rem}
-.imc-class{text-align:center;margin:.7rem auto 1.2rem;display:table;font-family:var(--mono);font-weight:700;font-size:.78rem;padding:.35rem .9rem;border-radius:99px}
-.imc-fields label{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:.9rem}
-.imc-fields b{color:var(--ink);font-size:.9rem}
-.imc-fields input[type=range]{width:100%;accent-color:var(--citrus);margin-top:.35rem;cursor:pointer}
-.imc-meta{background:var(--cream);border:1.5px dashed rgba(27,42,34,.25);border-radius:12px;padding:.8rem 1rem;font-size:.83rem;color:var(--ink2);margin-bottom:1.2rem}
-.imc-meta b{color:var(--citrus)}
-.w100{width:100%}
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:var(--cream);overflow:hidden;padding:16px 0;transform:rotate(-1deg) scale(1.02);border-top:1px solid rgba(232,80,58,.3);border-bottom:1px solid rgba(232,80,58,.3)}
+.marquee-track{display:flex;width:max-content;animation:mq 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:var(--font-display);font-weight:700;font-size:.92rem;letter-spacing:.18em;text-transform:uppercase;padding:0 26px;white-space:nowrap}
+.marquee-track span i{color:var(--blood-bright);font-style:normal;margin-right:26px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.marquee.rev .marquee-track{animation:mqr 40s linear infinite}
+@keyframes mqr{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
-/* ticker */
-.ticker{background:var(--green);color:#f2ecdd;overflow:hidden;padding:.9rem 0;transform:rotate(-1deg) scale(1.02)}
-.tk-track{display:flex;gap:2.6rem;width:max-content;animation:mar 26s linear infinite;font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
-.ticker:hover .tk-track{animation-play-state:paused}
-.tk-track i{font-style:normal;color:var(--sun)}
-@keyframes mar{to{transform:translateX(-50%)}}
+/* ---------- método ---------- */
+.metodo{padding:120px 0;background:var(--cream)}
+.metodo-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.metodo-left{position:sticky;top:140px;align-self:start}
+.day-big{font-family:var(--font-display);font-weight:800;font-size:clamp(3.4rem,7vw,5.4rem);line-height:1;color:var(--ink);margin:26px 0 6px}
+.day-big b{color:var(--blood)}
+.day-name{font-family:var(--font-accent);font-style:italic;font-size:1.4rem;color:var(--moss);min-height:1.6em}
+.rail{position:relative;margin-top:30px;height:220px;width:3px;background:var(--line);border-radius:3px}
+.rail-fill{position:absolute;top:0;left:0;width:100%;height:0%;background:linear-gradient(var(--blood),var(--ember));border-radius:3px;transition:height .5s cubic-bezier(.2,.7,.2,1)}
+.rail-nodes{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between}
+.rail-node{display:flex;align-items:center;gap:10px;transform:translateX(-5px)}
+.rail-node i{width:13px;height:13px;border-radius:50%;background:var(--cream);border:2.5px solid var(--line);transition:.35s;flex-shrink:0}
+.rail-node span{font-size:.7rem;font-weight:700;letter-spacing:.14em;color:rgba(23,8,7,.4);transition:.35s}
+.rail-node.on i{background:var(--blood);border-color:var(--blood)}
+.rail-node.on span{color:var(--ink)}
+.day-cards{display:flex;flex-direction:column;gap:22px}
+.day-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 32px;transition:border-color .4s,box-shadow .4s,transform .4s;position:relative;overflow:hidden}
+.day-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blood);transform:scaleY(0);transform-origin:top;transition:transform .4s}
+.day-card.active{border-color:rgba(196,39,27,.45);box-shadow:0 20px 50px rgba(23,8,7,.1);transform:translateX(6px)}
+.day-card.active::before{transform:scaleY(1)}
+.day-card-top{display:flex;align-items:baseline;gap:16px;margin-bottom:10px}
+.day-num{font-family:var(--font-display);font-weight:800;font-size:2.2rem;color:var(--cream2);-webkit-text-stroke:1.5px var(--moss);transition:.4s}
+.day-card.active .day-num{color:var(--blood);-webkit-text-stroke:0}
+.day-chip{font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:var(--cream2);color:var(--moss);padding:5px 12px;border-radius:999px}
+.day-card h3{font-size:1.35rem;margin-bottom:8px}
+.day-card p{font-size:.95rem;color:rgba(23,8,7,.72)}
+.day-card .day-action{margin-top:14px;font-size:.85rem;font-weight:600;color:var(--moss);display:flex;gap:8px;align-items:flex-start}
+.day-card .day-action::before{content:"→";color:var(--blood);font-weight:800}
+@media(max-width:900px){.metodo-grid{grid-template-columns:1fr;gap:40px}.metodo-left{position:static}.rail{display:none}}
 
-/* resultados */
-.res-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:2.4rem;align-items:stretch}
-.chart-card{background:var(--paper);border:1.5px solid rgba(27,42,34,.14);border-radius:20px;padding:1.6rem 1.6rem 1rem;box-shadow:var(--sh);position:relative}
-.chart-card h3{font-size:1.15rem;font-weight:700}
-.chart-card .lg{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.chart-wrap{position:relative;margin-top:.6rem}
-#chartSvg{width:100%;height:auto;display:block}
-.cg{stroke:rgba(27,42,34,.1);stroke-dasharray:3 5}
-.ct{font-family:var(--mono);font-size:10px;fill:var(--mut)}
-#chLine{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-#chArea{fill:url(#ag)}
-.cd{fill:var(--paper);stroke:var(--green);stroke-width:2}
-.cx{stroke:var(--citrus);stroke-width:1.5;stroke-dasharray:4 4;opacity:0}
-#chPt{fill:var(--citrus);stroke:var(--paper);stroke-width:2.5;opacity:0}
-.chart-tip{position:absolute;transform:translate(-50%,-135%);background:var(--ink);color:var(--cream);font-family:var(--mono);font-size:.7rem;padding:.45rem .7rem;border-radius:8px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s}
-.chart-tip b{color:var(--sun)}
-.res-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.res-stat{background:var(--paper);border:1.5px solid rgba(27,42,34,.14);border-radius:18px;padding:1.4rem 1.2rem;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .3s,box-shadow .3s}
-.res-stat:hover{transform:translateY(-5px);box-shadow:var(--sh)}
-.res-stat .n{font-family:var(--disp);font-weight:900;font-size:2.1rem;color:var(--green)}
-.res-stat:nth-child(2) .n{color:var(--citrus)}
-.res-stat .l{font-size:.78rem;color:var(--mut);font-weight:600}
-.res-note{grid-column:1/-1;font-family:var(--mono);font-size:.66rem;color:var(--mut)}
+/* ---------- recebe ---------- */
+.recebe{padding:110px 0;background:radial-gradient(900px 460px at 90% 0%,rgba(196,39,27,.22),transparent 60%),var(--pine);color:var(--cream)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:50px 0 70px}
+.step{border:1px solid var(--line-light);border-radius:18px;padding:28px;position:relative;transition:border-color .3s,transform .3s;background:rgba(247,241,233,.03)}
+.step:hover{border-color:var(--ember);transform:translateY(-6px)}
+.step-num{font-family:var(--font-display);font-weight:800;font-size:.8rem;color:var(--cream);background:var(--blood);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step h3{font-size:1.1rem;margin-bottom:8px}
+.step p{font-size:.9rem;color:rgba(247,241,233,.68)}
+.guides-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.g-card{background:rgba(247,241,233,.05);border:1px solid var(--line-light);border-radius:16px;padding:24px;transition:background .3s,transform .3s,border-color .3s;position:relative}
+.g-card:hover{background:rgba(247,241,233,.1);transform:translateY(-6px);border-color:var(--blood-bright)}
+.g-card .g-day{font-family:var(--font-display);font-weight:800;font-size:1.9rem;color:var(--blood-bright)}
+.g-card h4{font-family:var(--font-display);font-weight:700;font-size:1rem;margin:10px 0 8px;letter-spacing:-.01em}
+.g-card p{font-size:.82rem;color:rgba(247,241,233,.62)}
+.g-card .g-tag{position:absolute;top:18px;right:18px;font-size:.6rem;font-weight:700;letter-spacing:.14em;color:var(--ember);text-transform:uppercase}
+@media(max-width:1000px){.guides-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.guides-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
 
-/* antes/depois */
-.ba-sec{background:var(--cream2)}
-.ba-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:center}
-.ba-quote{font-family:var(--disp);font-style:italic;font-weight:700;font-size:1.3rem;color:var(--ink2);border-left:4px solid var(--citrus);padding-left:1.2rem;margin:1.6rem 0}
-.ba-chips{display:flex;gap:.7rem;flex-wrap:wrap}
-.ba-chips span{font-family:var(--mono);font-weight:700;font-size:.78rem;background:var(--paper);border:1.5px solid var(--ink);border-radius:99px;padding:.45rem .95rem}
-.ba-chips .hi{background:var(--citrus);color:#fff;border-color:var(--citrus)}
-.ba{position:relative;border-radius:22px;overflow:hidden;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--leaf);aspect-ratio:4/3.4;cursor:ew-resize;touch-action:none;user-select:none}
-.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
-.ba-before{clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
-.ba-line{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:var(--paper);transform:translateX(-50%);z-index:3}
-.ba-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:var(--citrus);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem;box-shadow:0 6px 18px rgba(0,0,0,.35);letter-spacing:-1px}
-.ba-grip:focus-visible{outline:3px solid var(--ink)}
-.ba-tag{position:absolute;top:14px;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.18em;padding:.4rem .8rem;border-radius:99px;z-index:2}
-.ba-tag.antes{left:14px;background:var(--ink);color:var(--cream)}
-.ba-tag.depois{right:14px;background:var(--leaf);color:#fff}
-.ba-cap{margin-top:1rem;font-size:.85rem;color:var(--mut)}
-.ba-cap b{color:var(--ink)}
+/* ---------- compare ---------- */
+.compare{padding:120px 0}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:56px}
+.cmp{border-radius:22px;padding:38px}
+.cmp.bad{background:var(--cream2);border:1px solid var(--line)}
+.cmp.good{background:var(--ink);color:var(--cream);border:2px solid var(--blood);position:relative;overflow:hidden}
+.cmp.good::after{content:"7";position:absolute;right:-30px;bottom:-70px;font-family:var(--font-display);font-weight:800;font-size:16rem;color:rgba(232,80,58,.1);line-height:1}
+.cmp h3{font-size:1.25rem;margin-bottom:24px}
+.cmp ul{list-style:none;display:flex;flex-direction:column;gap:16px}
+.cmp li{display:flex;gap:12px;font-size:.95rem;align-items:flex-start}
+.cmp li i{font-style:normal;font-weight:800;flex-shrink:0;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;margin-top:2px}
+.cmp.bad li i{background:rgba(23,8,7,.1);color:rgba(23,8,7,.5)}
+.cmp.bad li{color:rgba(23,8,7,.6)}
+.cmp.good li i{background:var(--blood);color:var(--cream)}
+@media(max-width:800px){.compare-grid{grid-template-columns:1fr}}
 
-/* método (dark) */
-.method{background:var(--green-d);color:#f2ecdd}
-.method .kicker{color:var(--lime)}
-.method h2 em{color:var(--sun)}
-.m-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4.5rem}
-.m-left{position:sticky;top:110px;align-self:start}
-.m-left p{color:#c9d6c2;max-width:42ch;margin-top:1rem}
-.m-left .big{font-family:var(--disp);font-weight:900;font-size:5rem;color:transparent;-webkit-text-stroke:2px var(--lime);line-height:1;margin-top:2rem}
-.m-left .big small{font-size:1.2rem;-webkit-text-stroke:1px var(--lime);display:block;font-family:var(--mono);letter-spacing:.2em}
-.phase{position:relative;padding:0 0 3rem 2.6rem;border-left:2px dashed rgba(242,236,221,.25)}
-.phase:last-child{padding-bottom:.5rem;border-left-color:transparent}
-.phase::before{content:attr(data-n);position:absolute;left:-1.35rem;top:0;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--green-d);border:2px solid var(--sun);color:var(--sun);display:grid;place-items:center;font-family:var(--disp);font-weight:900}
-.phase .wk{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:var(--lime);text-transform:uppercase}
-.phase h3{font-size:1.5rem;font-weight:700;margin:.4rem 0 .6rem;color:#fdf9ee}
-.phase p{color:#c9d6c2;font-size:.95rem;max-width:52ch}
-.phase ul{list-style:none;margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.5rem}
-.phase li{font-family:var(--mono);font-size:.7rem;background:rgba(185,209,138,.12);border:1px solid rgba(185,209,138,.35);color:var(--lime);border-radius:99px;padding:.35rem .8rem}
-.phase .mtr{margin-top:.9rem;display:inline-block;font-family:var(--mono);font-weight:700;font-size:.78rem;color:var(--sun)}
+/* ---------- quote band ---------- */
+.quote-band{position:relative;padding:130px 0;overflow:hidden}
+.band-bg{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;will-change:transform}
+.band-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,8,7,.9),rgba(43,13,11,.8))}
+.quote-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.quote-grid blockquote{font-family:var(--font-accent);font-style:italic;font-size:clamp(1.5rem,2.8vw,2.2rem);color:var(--cream);line-height:1.3}
+.quote-grid blockquote b{color:var(--ember);font-weight:600}
+.quote-grid cite{display:block;margin-top:18px;font-family:var(--font-body);font-style:normal;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(247,241,233,.55)}
+@media(max-width:800px){.quote-grid{grid-template-columns:1fr;gap:40px}}
 
-/* cardápio */
-.meal-tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
-.mtab{font-family:var(--mono);font-weight:700;font-size:.78rem;padding:.6rem 1.2rem;border-radius:99px;border:2px solid rgba(27,42,34,.2);background:transparent;color:var(--ink2);cursor:pointer;transition:all .25s}
-.mtab:hover{border-color:var(--green);color:var(--green)}
-.mtab.on{background:var(--green);border-color:var(--green);color:#fdf9ee}
-.meal-panel{display:none;grid-template-columns:340px 1fr;gap:2.6rem;background:var(--paper);border:1.5px solid rgba(27,42,34,.14);border-radius:22px;padding:2rem;box-shadow:var(--sh)}
-.meal-panel.on{display:grid;animation:fadeUp .5s cubic-bezier(.2,.7,.2,1)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.meal-img{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1}
-.meal-img img{width:100%;height:100%;object-fit:cover;transition:transform 5s ease}
-.meal-panel:hover .meal-img img{transform:scale(1.09)}
-.meal-kcal{position:absolute;bottom:12px;left:12px;background:var(--citrus);color:#fff;font-family:var(--mono);font-weight:700;font-size:.78rem;padding:.45rem .9rem;border-radius:99px}
-.meal-info h3{font-size:1.5rem;font-weight:900;margin-bottom:.3rem}
-.meal-info .sub{color:var(--mut);font-size:.9rem;margin-bottom:1.2rem}
-.meal-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1.5px dashed rgba(27,42,34,.15)}
-.meal-row:last-of-type{border-bottom:none}
-.meal-row .nm{font-weight:700;font-size:.95rem}
-.meal-row .mc{display:flex;gap:.35rem;margin-top:.3rem}
-.mc span{font-family:var(--mono);font-size:.62rem;border-radius:6px;padding:.15rem .45rem;border:1px solid}
-.mc .c{color:#a97b12;border-color:rgba(242,178,62,.6)}
-.mc .p{color:var(--leaf);border-color:rgba(62,142,94,.5)}
-.mc .g{color:var(--citrus);border-color:rgba(244,98,46,.5)}
-.meal-row .kc{font-family:var(--mono);font-weight:700;font-size:.85rem;white-space:nowrap}
-.meal-note{margin-top:1.1rem;background:var(--cream);border-radius:12px;padding:.8rem 1rem;font-size:.82rem;color:var(--ink2)}
-.meal-note b{color:var(--green)}
+/* ---------- resultados ---------- */
+.resultados{padding:120px 0 100px;background:var(--cream)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:60px 0}
+.stat{border:1px solid var(--line);border-radius:20px;background:#fff;padding:36px 20px;text-align:center;transition:transform .3s,box-shadow .3s}
+.stat:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(23,8,7,.08)}
+.stat-num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,4.5vw,3.6rem);color:var(--blood);display:block;line-height:1}
+.stat-label{font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(23,8,7,.55);display:block;margin-top:10px}
+.t-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.t-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;transition:transform .3s,box-shadow .3s;position:relative}
+.t-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(23,8,7,.1)}
+.t-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.t-avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--blood)}
+.t-top strong{display:block;font-size:.98rem}
+.t-top small{color:rgba(23,8,7,.5);font-size:.78rem}
+.t-tag{margin-left:auto;background:var(--ink);color:var(--ember);font-family:var(--font-display);font-weight:800;font-size:.85rem;padding:7px 14px;border-radius:999px}
+.t-card p{font-size:.94rem;color:rgba(23,8,7,.75)}
+.t-card .stars{font-size:.85rem;display:block;margin-bottom:10px}
+@media(max-width:800px){.t-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}}
 
-/* depoimentos */
-.dep-sec{background:var(--cream2);overflow:hidden}
-.pc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
-.pc{background:var(--paper);border:1.5px solid rgba(27,42,34,.16);border-radius:6px;padding:1.6rem 1.4rem 1.3rem;position:relative;transform:rotate(var(--r,0deg));transition:transform .35s,box-shadow .35s;box-shadow:0 8px 22px -12px rgba(27,42,34,.3)}
-.pc:hover{transform:rotate(0deg) translateY(-8px);box-shadow:var(--sh)}
-.pc::before{content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(-2deg);width:86px;height:22px;background:rgba(242,178,62,.55)}
-.pc .st{color:var(--sun);letter-spacing:.15em;font-size:.85rem}
-.pc q{display:block;font-family:var(--disp);font-style:italic;font-weight:600;font-size:1rem;margin:.8rem 0 1rem;quotes:"“" "”"}
-.pc .who{font-weight:800;font-size:.88rem}
-.pc .res{font-family:var(--mono);font-weight:700;font-size:.7rem;color:var(--citrus);display:block;margin-top:.2rem}
-@media(max-width:1000px){.pc-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.pc-grid{grid-template-columns:1fr}}
+/* ---------- TRANSFORMAÇÃO: antes/depois arrastável ---------- */
+.transformacao{padding:120px 0;background:var(--cream2)}
+.ba-slider{position:relative;--pos:50%;max-width:960px;margin:56px auto 0;border-radius:24px;overflow:hidden;aspect-ratio:16/10;cursor:ew-resize;touch-action:none;box-shadow:0 40px 90px rgba(23,8,7,.28);user-select:none;-webkit-user-select:none;outline:none}
+.ba-slider:focus-visible{box-shadow:0 0 0 4px var(--blood),0 40px 90px rgba(23,8,7,.28)}
+.ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba-clip{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba-clip::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,8,7,.14),transparent 40%);pointer-events:none}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:var(--cream);transform:translateX(-50%);box-shadow:0 0 24px rgba(23,8,7,.5)}
+.ba-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:var(--blood);color:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;letter-spacing:3px;border:none;box-shadow:0 0 0 5px rgba(247,241,233,.95),0 12px 32px rgba(196,39,27,.55);transition:transform .25s}
+.ba-slider:hover .ba-grip{transform:translate(-50%,-50%) scale(1.08)}
+.ba-label{position:absolute;top:18px;font-size:.68rem;font-weight:800;letter-spacing:.18em;padding:8px 14px;border-radius:999px;backdrop-filter:blur(6px);pointer-events:none}
+.lb{left:18px;background:rgba(23,8,7,.68);color:var(--cream)}
+.la{right:18px;background:rgba(196,39,27,.88);color:var(--cream)}
+.ba-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(23,8,7,.72);color:var(--cream);font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:9px 18px;border-radius:999px;animation:hintFloat 2s ease-in-out infinite;transition:opacity .5s;pointer-events:none}
+.ba-slider.touched .ba-hint{opacity:0}
+@keyframes hintFloat{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-7px)}}
+.ba-chips{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:36px}
+.ba-chips span{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:10px 20px;font-weight:700;font-size:.85rem;color:var(--moss);transition:.3s}
+.ba-chips span:hover{border-color:var(--blood);color:var(--blood);transform:translateY(-3px)}
+.ba-caption{text-align:center;margin-top:18px;font-size:.8rem;color:rgba(23,8,7,.5)}
 
-/* planos */
-.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;align-items:stretch}
-.plan{background:var(--paper);border:1.5px solid rgba(27,42,34,.16);border-radius:20px;padding:2.2rem 1.9rem;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;position:relative}
-.plan:hover{transform:translateY(-6px);box-shadow:var(--sh)}
-.plan h3{font-size:1.4rem;font-weight:900}
-.plan .for{font-size:.82rem;color:var(--mut);margin:.3rem 0 1.4rem}
-.plan .price{font-family:var(--disp);font-weight:900;font-size:2.6rem;line-height:1}
-.plan .price small{font-family:var(--mono);font-size:.72rem;color:var(--mut);font-weight:400}
-.plan ul{list-style:none;margin:1.6rem 0 2rem;flex:1}
-.plan li{padding:.5rem 0;font-size:.9rem;color:var(--ink2);display:flex;gap:.6rem}
-.plan li::before{content:"✓";color:var(--leaf);font-weight:800}
-.plan.feat{background:var(--green);color:#f2ecdd;border-color:var(--green);transform:scale(1.045);box-shadow:0 26px 60px -24px rgba(30,91,63,.65)}
-.plan.feat:hover{transform:scale(1.045) translateY(-6px)}
-.plan.feat .for,.plan.feat .price small{color:#bcd0b6}
-.plan.feat li{color:#dcead6}.plan.feat li::before{color:var(--sun)}
-.plan .badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--citrus);color:#fff;font-family:var(--mono);font-weight:700;font-size:.66rem;letter-spacing:.16em;padding:.45rem 1.1rem;border-radius:99px;white-space:nowrap}
-.guarantee{margin-top:3rem;display:flex;gap:1.6rem;align-items:center;background:var(--paper);border:2px dashed var(--leaf);border-radius:20px;padding:1.6rem 2rem}
-.seal{flex-shrink:0;width:92px;height:92px;border-radius:50%;background:var(--green);color:#fdf9ee;display:grid;place-items:center;text-align:center;font-family:var(--disp);font-weight:900;line-height:1;transform:rotate(-8deg);box-shadow:4px 4px 0 var(--sun)}
-.seal span{font-size:1.5rem}.seal small{font-family:var(--mono);font-size:.5rem;letter-spacing:.12em}
-.guarantee h3{font-size:1.15rem;font-weight:900}
-.guarantee p{color:var(--mut);font-size:.9rem}
-@media(max-width:960px){.plans-grid{grid-template-columns:1fr}.plan.feat{transform:none}.plan.feat:hover{transform:translateY(-6px)}}
+/* ---------- garantia ---------- */
+.garantia{padding:120px 0;background:radial-gradient(800px 420px at 12% 10%,rgba(196,39,27,.2),transparent 60%),var(--ink);color:var(--cream)}
+.gar-grid{display:grid;grid-template-columns:auto 1fr;gap:70px;align-items:center}
+.seal-wrap{position:relative;width:250px;height:250px;flex-shrink:0}
+.seal{width:100%;height:100%;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.seal text{fill:var(--ember);font-size:13.5px;font-weight:700;letter-spacing:3.5px;font-family:var(--font-body)}
+.seal-core{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.seal-core b{font-family:var(--font-display);font-weight:800;font-size:4.6rem;line-height:1;color:var(--blood-bright)}
+.seal-core span{font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--cream)}
+.gar-list{list-style:none;margin:28px 0 36px;display:flex;flex-direction:column;gap:14px}
+.gar-list li{display:flex;gap:12px;align-items:flex-start;font-size:1rem}
+.gar-list li i{font-style:normal;color:var(--blood-bright);font-weight:800}
+@media(max-width:800px){.gar-grid{grid-template-columns:1fr;gap:44px}.seal-wrap{margin:0 auto}}
 
-/* faq */
-.faq-wrap{max-width:800px;margin:0 auto}
-.faq-item{background:var(--paper);border:1.5px solid rgba(27,42,34,.14);border-radius:14px;margin-bottom:.8rem;overflow:hidden;transition:border-color .3s}
-.faq-item.open{border-color:var(--green)}
-.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;font-family:var(--body);font-weight:800;font-size:1rem;color:var(--ink);padding:1.2rem 1.4rem;cursor:pointer;text-align:left}
-.faq-q .pm{font-family:var(--disp);font-weight:900;font-size:1.3rem;color:var(--citrus);transition:transform .3s;flex-shrink:0}
-.faq-item.open .pm{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.7,.2,1)}
-.faq-a p{padding:0 1.4rem 1.3rem;color:var(--mut);font-size:.93rem}
+/* ---------- faq ---------- */
+.faq{padding:120px 0}
+.faq-list{max-width:780px;margin:50px auto 0}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:26px 4px;font-family:var(--font-display);font-weight:700;font-size:1.08rem;letter-spacing:-.01em;color:var(--ink);transition:color .3s}
+.faq-q:hover{color:var(--moss)}
+.faq-ico{font-family:var(--font-body);font-weight:400;font-size:1.6rem;color:var(--blood);transition:transform .4s;flex-shrink:0;line-height:1}
+.faq-item.open .faq-ico{transform:rotate(45deg)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1)}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a-in{overflow:hidden}
+.faq-a-in p{padding:0 4px 26px;color:rgba(23,8,7,.72);font-size:.96rem;max-width:64ch}
+.faq-note{text-align:center;margin-top:40px;font-size:.9rem;color:rgba(23,8,7,.55)}
+.faq-note a{color:var(--blood);font-weight:700}
 
-/* cta */
-.cta{background:var(--green-d);color:#f2ecdd;overflow:hidden}
-.cta-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
-.cta h2 em{color:var(--sun)}
-.cta p.lead{color:#c9d6c2;margin:1rem 0 2rem;max-width:48ch}
-.lead-form{display:flex;flex-direction:column;gap:.9rem;max-width:440px}
-.lead-form input{background:rgba(253,249,238,.08);border:1.5px solid rgba(242,236,221,.3);border-radius:12px;padding:.95rem 1.2rem;color:#fdf9ee;font-family:var(--body);font-size:.95rem;transition:border-color .25s}
-.lead-form input::placeholder{color:#93a68e}
-.lead-form input:focus{outline:none;border-color:var(--sun)}
-.lead-form .err{color:#ffb3a0;font-size:.78rem;font-family:var(--mono);min-height:1em}
-.lead-ok{background:rgba(185,209,138,.12);border:1.5px solid var(--lime);border-radius:16px;padding:1.6rem;font-size:.95rem;max-width:440px}
-.lead-ok b{color:var(--lime)}
-.micro{font-family:var(--mono);font-size:.66rem;color:#93a68e;margin-top:.9rem;letter-spacing:.06em}
-.cta-img{border-radius:22px;overflow:hidden;border:2px solid rgba(242,236,221,.25);position:relative}
-.cta-img img{width:100%;height:100%;object-fit:cover;animation:kb 14s ease-in-out infinite alternate}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
-.cta-img .tag{position:absolute;bottom:14px;left:14px;background:var(--paper);color:var(--ink);font-family:var(--mono);font-weight:700;font-size:.68rem;padding:.5rem .9rem;border-radius:99px}
+/* ---------- oferta ---------- */
+.oferta{padding:140px 0;background:radial-gradient(950px 520px at 85% 25%,rgba(196,39,27,.35),transparent 62%),radial-gradient(700px 400px at 8% 85%,rgba(196,39,27,.18),transparent 60%),var(--pine);color:var(--cream);text-align:center;position:relative;overflow:hidden}
+.ghost{position:absolute;font-family:var(--font-display);font-weight:800;color:rgba(232,80,58,.07);line-height:1;user-select:none;pointer-events:none;animation:floaty 9s ease-in-out infinite}
+.g1{font-size:24rem;right:-60px;top:6%}
+.g2{font-size:15rem;left:4%;bottom:-6%;animation-delay:1.2s}
+.g3{font-size:9rem;right:22%;bottom:4%;animation-delay:2.2s}
+.oferta h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.cd-wrap{display:flex;justify-content:center;align-items:stretch;gap:12px;margin:48px 0 14px}
+.cdbox{background:linear-gradient(180deg,var(--pine-2),#1D0807);border:1px solid rgba(232,80,58,.3);border-radius:18px;min-width:112px;padding:24px 10px 18px;position:relative;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 24px 50px rgba(0,0,0,.45)}
+.cdbox::before{content:"";position:absolute;top:50%;left:8%;right:8%;height:1px;background:rgba(232,80,58,.18)}
+.cdbox b{font-family:var(--font-display);font-weight:800;font-size:3rem;color:var(--cream);display:block;line-height:1;font-variant-numeric:tabular-nums;text-shadow:0 0 26px rgba(232,80,58,.5)}
+.cdbox label{font-size:.64rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);display:block;margin-top:10px}
+.cd-colon{font-family:var(--font-display);font-weight:800;font-size:2.2rem;color:var(--ember);align-self:center;animation:blink 1s steps(2) infinite}
+.vagas-line{font-size:1rem;margin:14px 0 38px}
+.vagas-line b{color:var(--ember);font-size:1.25rem}
+.trust-row{display:flex;justify-content:center;gap:34px;margin-top:44px;flex-wrap:wrap}
+.trust-row div{display:flex;align-items:center;gap:9px;font-size:.82rem;font-weight:600;letter-spacing:.06em;color:rgba(247,241,233,.7)}
+.trust-row svg{width:18px;height:18px;stroke:var(--ember);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:560px){.cdbox{min-width:88px;padding:18px 6px 14px}.cdbox b{font-size:2.2rem}.cd-colon{font-size:1.5rem}}
 
-/* footer */
-footer{background:var(--green-d);color:#bcd0b6;border-top:1px solid rgba(242,236,221,.15);padding:3.5rem 0 2rem}
-.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
-.f-grid .logo{color:#fdf9ee}
-.f-grid p{font-size:.85rem;max-width:30ch;margin-top:.7rem}
-.f-grid h4{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#93a68e;margin-bottom:1rem}
-.f-grid a{display:block;font-size:.87rem;margin-bottom:.5rem;transition:color .2s}
-.f-grid a:hover{color:var(--sun)}
-.f-bot{border-top:1px solid rgba(242,236,221,.15);padding-top:1.5rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.66rem;color:#93a68e}
-.f-bot .disc{max-width:70ch}
-@media(max-width:800px){.f-grid{grid-template-columns:1fr 1fr}}
+/* ---------- footer ---------- */
+footer{background:#120505;color:rgba(247,241,233,.5);padding:56px 0;font-size:.8rem}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot-grid .logo{color:var(--cream)}
+.foot-grid .logo svg{stroke:var(--blood-bright)}
+footer p{max-width:56ch}
+.foot-links{display:flex;gap:22px}
+.foot-links a:hover{color:var(--ember)}
 
-/* reveal */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
-.reveal.in{opacity:1;transform:none}
+/* ---------- buybar ---------- */
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:70;background:linear-gradient(90deg,#120505,var(--pine));color:var(--cream);display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 20px;transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.7,.2,1);box-shadow:0 -10px 40px rgba(23,8,7,.45);border-top:1px solid rgba(232,80,58,.3)}
+.buybar.show{transform:translateY(0)}
+.buybar-info strong{display:block;font-size:.86rem}
+.buybar-info strong b{color:var(--ember)}
+.buybar-timer{font-size:.72rem;color:rgba(247,241,233,.6);display:flex;align-items:center;gap:7px;margin-top:3px}
+@media(max-width:560px){.buybar{flex-direction:column;gap:10px;text-align:center}.buybar-timer{justify-content:center}}
 
-@media(max-width:980px){
- .hero-grid,.ba-grid,.m-grid,.cta-grid,.res-grid{grid-template-columns:1fr}
- .m-left{position:static}
- .meal-panel{grid-template-columns:1fr}
- .imc-card{transform:none}
-}
+/* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
- html{scroll-behavior:auto}
- *,*::before,*::after{animation:none!important;transition:none!important}
- .reveal{opacity:1;transform:none}
- .lm-i{transform:none}
- .tk-track{animation:none!important;flex-wrap:wrap;width:auto}
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .lm-inner{transform:none !important}
+  .rv{opacity:1 !important;transform:none !important}
+  .marquee-track{animation:none !important}
 }
 </style>
 </head>
 <body>
-<div id="prog"></div>
-<div class="noise"></div>
 
-<nav id="nav">
-  <div class="nav-in">
-    <a class="logo" href="#topo">LEVE<i>°</i></a>
-    <div class="nav-links">
-      <a href="#resultados">Resultados</a><a href="#transformacao">Transformações</a>
-      <a href="#metodo">Método</a><a href="#cardapio">Cardápio</a>
-      <a href="#planos">Planos</a><a href="#faq">Dúvidas</a>
-    </div>
-    <a class="btn btn-c nav-cta" href="#comecar" style="padding:.65rem 1.3rem">Começar agora</a>
-    <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
+<!-- ══════════ TOPBAR URGÊNCIA ══════════ -->
+<div class="topbar">
+  <div class="tb-item tb-live"><span class="dot"></span><span class="tb-txt">Condição desta semana</span></div>
+  <span class="tb-sep"></span>
+  <div class="tb-item tb-vagas">
+    <span class="tb-txt">Restam <b data-vagas>17</b> acessos</span>
+    <span class="tb-bar"><i id="vagasBar"></i></span>
   </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero" id="topo">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="kicker">Programa LEVE° · emagrecimento definitivo</div>
-      <h1>
-        <span class="lm"><span class="lm-i" style="--d:.1s">Menos peso.</span></span>
-        <span class="lm"><span class="lm-i" style="--d:.28s">Mais <em>leveza.</em></span></span>
-      </h1>
-      <p class="hero-sub">Reeducação alimentar, treinos de 20 minutos e acompanhamento de nutricionistas de verdade — <strong>sem dieta maluca, sem passar fome</strong>, sem efeito sanfona.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-c" href="#comecar">Quero meu plano grátis <span class="ar">→</span></a>
-        <a class="btn btn-o" href="#metodo">Conhecer o método</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hstat"><div class="n">−<b><span data-count="4.2" data-dec="1">0</span></b> kg</div><div class="l">média por mês</div></div>
-        <div class="hstat"><div class="n"><b><span data-count="38">0</span></b> mil</div><div class="l">alunas e alunos</div></div>
-        <div class="hstat"><div class="n"><b><span data-count="94">0</span>%</b></div><div class="l">concluem 90 dias</div></div>
-      </div>
-    </div>
-
-    <div class="imc-card reveal">
-      <div class="imc-head"><span>Calculadora LEVE°</span><b>● ao vivo</b></div>
-      <div class="gauge"><div class="gauge-in"></div><div class="needle" id="needle"></div></div>
-      <div class="gauge-val"><span id="imcNum">29,8</span><small>SEU IMC</small></div>
-      <div class="imc-class" id="imcClass">Sobrepeso</div>
-      <div class="imc-fields">
-        <label>Peso · <b id="wVal">84</b> kg<input type="range" id="wIn" min="40" max="160" value="84" aria-label="Peso em quilos"></label>
-        <label>Altura · <b id="hVal">168</b> cm<input type="range" id="hIn" min="140" max="200" value="168" aria-label="Altura em centímetros"></label>
-      </div>
-      <div class="imc-meta" id="imcMeta"></div>
-      <a class="btn btn-p w100" href="#planos">Ver meu plano ideal <span class="ar">→</span></a>
-    </div>
-  </div>
-</header>
-
-<!-- TICKER -->
-<div class="ticker" aria-hidden="true">
-  <div class="tk-track" id="tkTrack">
-    <span>Sem dieta maluca <i>✦</i></span><span>Sem passar fome <i>✦</i></span>
-    <span>Nutris de verdade <i>✦</i></span><span>Resultado em 90 dias <i>✦</i></span>
-    <span>Garantia de 30 dias <i>✦</i></span><span>+38 mil vidas leves <i>✦</i></span>
-    <span>100% online <i>✦</i></span><span>Treinos de 20 min <i>✦</i></span>
+  <span class="tb-sep"></span>
+  <div class="tb-item">
+    <span class="tb-txt">Expira em</span>
+    <span class="tiles">
+      <span class="tile"><b class="u-h">00</b></span><i>:</i>
+      <span class="tile"><b class="u-m">00</b></span><i>:</i>
+      <span class="tile"><b class="u-s">00</b></span>
+    </span>
   </div>
 </div>
 
-<!-- RESULTADOS -->
-<section class="sec" id="resultados">
+<!-- ══════════ HEADER ══════════ -->
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#topo"><svg viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3 2.5.5 5 2.5 5 6a5 5 0 1 1-10 0c0-1.5.5-3 2-4.5.5 1 1.5 2 1.5 2z"/></svg>RESET<span>·7</span></a>
+    <nav class="nav-links">
+      <a href="#metodo">O Método</a>
+      <a href="#transformacao">Transformação</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#garantia">Garantia</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#" class="btn btn-primary btn-sm js-buy">Adquirir agora</a>
+  </div>
+</header>
+
+<main>
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="hero-badge rv"><span class="dot"></span>MÉTODO VALIDADO POR <b>+3.400 PESSOAS</b></div>
+      <p class="eyebrow scramble" data-text="DESAFIO RESET DE 7 DIAS">DESAFIO RESET DE 7 DIAS</p>
+      <h1 class="hero-title">
+        <span class="lm"><span class="lm-inner">O guia prático que te</span></span>
+        <span class="lm"><span class="lm-inner">fará perder até <em>5kg</em></span></span>
+        <span class="lm"><span class="lm-inner">em <em>7 dias</em>.</span></span>
+      </h1>
+      <p class="hero-desc rv" style="--d:.45s">Um guia prático de 7 dias que mostra, passo a passo, como perder 5kg <strong>sem dietas loucas, sem parar de comer o que gosta e sem dedicar horas à academia</strong>. Você recebe uma orientação por dia para saber exatamente o que fazer e construir uma rotina mais consistente.</p>
+      <div class="hero-cta rv" style="--d:.6s">
+        <a href="#" class="btn btn-primary pulse js-buy">Quero adquirir ainda hoje! <span class="btn-arrow">→</span></a>
+        <div class="hero-note"><span class="stars">★★★★★</span> 4,9/5 &nbsp;•&nbsp; Acesso imediato &nbsp;•&nbsp; Garantia de 7 dias</div>
+      </div>
+    </div>
+    <div class="hero-visual rv" style="--d:.3s">
+      <div class="float-chip chip-a">−5kg<br><small>em 7 dias</small></div>
+      <div class="float-chip chip-b">8 guias<br><small>1 orientação por dia</small></div>
+      <img class="stack-img" src="https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/15f028d73-7b87-4b1c-bc50-b27b03229ee1.png" alt="Coleção de guias do Desafio Reset de 7 Dias">
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq1"></div></div>
+
+<!-- ══════════ MÉTODO ══════════ -->
+<section class="metodo" id="metodo">
+  <div class="wrap metodo-grid">
+    <div class="metodo-left">
+      <p class="eyebrow">O mecanismo único</p>
+      <h2>7 dias. Um foco por dia. <em>Zero</em> confusão.</h2>
+      <p class="lead">Cada dia constrói no anterior. Você nunca fica perdido: abre o guia do dia, lê em 10 minutos e sabe exatamente o que fazer.</p>
+      <div class="day-big">DIA <b id="dayBig">01</b>/07</div>
+      <div class="day-name" id="dayName">Limpeza &amp; Decisão</div>
+      <div class="rail"><div class="rail-fill" id="railFill"></div>
+        <div class="rail-nodes" id="railNodes"></div>
+      </div>
+    </div>
+    <div class="day-cards" id="dayCards"></div>
+  </div>
+</section>
+
+<!-- ══════════ RECEBE ══════════ -->
+<section class="recebe dark" id="recebe">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker">Resultados reais</div>
-      <h2>Na balança — e <em>na vida.</em></h2>
-      <p class="sub">Acompanhe a curva média de quem segue o programa por 12 semanas. Passe o mouse pelo gráfico para ver semana a semana.</p>
+    <p class="eyebrow rv">Ao adquirir hoje, você recebe</p>
+    <h2 class="rv" style="--d:.1s">8 guias: o mapa completo + <em>os 7 dias</em></h2>
+    <div class="steps">
+      <div class="step rv"><div class="step-num">1</div><h3>Você adquire hoje</h3><p>Pagamento confirmado e o acesso chega no seu e-mail em segundos. Sem espera, sem correio.</p></div>
+      <div class="step rv" style="--d:.12s"><div class="step-num">2</div><h3>Recebe os 8 guias</h3><p>PDFs otimizados pra celular, tablet ou computador. Pode baixar e imprimir se preferir.</p></div>
+      <div class="step rv" style="--d:.24s"><div class="step-num">3</div><h3>Segue 1 por dia</h3><p>Cada manhã, uma orientação clara. Cada dia, uma ação. Em 7 dias, uma rotina nova.</p></div>
     </div>
-    <div class="res-grid">
-      <div class="chart-card reveal">
-        <h3>Curva de emagrecimento · 12 semanas</h3>
-        <span class="lg">peso médio (kg) · últimas 1.000 alunas</span>
-        <div class="chart-wrap" id="chartWrap">
-          <svg id="chartSvg" viewBox="0 0 640 280" role="img" aria-label="Gráfico de perda de peso ao longo de 12 semanas"></svg>
-          <div class="chart-tip" id="chartTip"></div>
-        </div>
+    <div class="guides-grid" id="guidesGrid"></div>
+  </div>
+</section>
+
+<!-- ══════════ COMPARE ══════════ -->
+<section class="compare" id="porque">
+  <div class="wrap">
+    <p class="eyebrow rv">Por que funciona</p>
+    <h2 class="rv" style="--d:.1s">A diferença não é força de vontade. <em>É método.</em></h2>
+    <div class="compare-grid">
+      <div class="cmp bad rv">
+        <h3>Dietas tradicionais</h3>
+        <ul>
+          <li><i>✕</i>Passar fome e contar caloria o dia inteiro</li>
+          <li><i>✕</i>Cortar tudo o que você gosta pra sempre</li>
+          <li><i>✕</i>Horas de academia obrigatórias</li>
+          <li><i>✕</i>Regras confusas e mil exceções</li>
+          <li><i>✕</i>Culpa a cada "escapada"</li>
+          <li><i>✕</i>Efeito sanfona: você sempre recomeça na segunda</li>
+        </ul>
       </div>
-      <div class="res-col">
-        <div class="res-stat reveal"><div class="n">−<span data-count="8.6" data-dec="1">0</span> kg</div><div class="l">perda média em 90 dias</div></div>
-        <div class="res-stat reveal" style="--d:.08s"><div class="n">−<span data-count="9.4" data-dec="1">0</span> cm</div><div class="l">de cintura, em média</div></div>
-        <div class="res-stat reveal" style="--d:.16s"><div class="n"><span data-count="72">0</span>%</div><div class="l">relatam mais energia e sono melhor</div></div>
-        <div class="res-stat reveal" style="--d:.24s"><div class="n"><span data-count="4.9" data-dec="1">0</span>★</div><div class="l">satisfação média no app</div></div>
-        <div class="res-note reveal">* dados internos da turma de jan–jun/2026. Resultados variam por pessoa.</div>
+      <div class="cmp good rv" style="--d:.15s">
+        <h3>Desafio Reset de 7 Dias</h3>
+        <ul>
+          <li><i>✓</i>Você come até se sentir satisfeito</li>
+          <li><i>✓</i>Sua comida favorita continua no cardápio</li>
+          <li><i>✓</i>10 a 30 minutos de movimento, no seu ritmo</li>
+          <li><i>✓</i>Uma orientação clara por dia</li>
+          <li><i>✓</i>Zero culpa: feito é melhor que perfeito</li>
+          <li><i>✓</i>Rotina sustentável que continua depois do dia 7</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ANTES / DEPOIS -->
-<section class="sec ba-sec" id="transformacao">
-  <div class="wrap ba-grid">
-    <div class="reveal">
-      <div class="kicker">Transformações</div>
-      <h2>A prova está <em>na foto.</em></h2>
-      <p class="ba-quote">Eu não virei outra pessoa. Eu me reencontrei.</p>
-      <p style="color:var(--mut);font-size:.95rem">Mariana entrou no programa com 84 kg, duas dietas frustradas no currículo e zero vontade de ir à academia. Noventa dias depois, a balança — e o espelho — contam a história. <strong style="color:var(--ink)">Arraste a divisor e veja você também.</strong></p>
-      <div class="ba-chips" style="margin-top:1.4rem">
-        <span class="hi">−12,4 kg</span><span>−14 cm cintura</span><span>90 dias</span><span>0 dietas restritivas</span>
-      </div>
-    </div>
-    <div class="reveal" style="--d:.1s">
-      <div class="ba" id="ba" style="--p:50%">
-        <img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/16f00c020-bc58-4ecf-b4bb-95dd102f1fe2.png" alt="Depois: Mariana após 90 dias no programa LEVE">
-        <img class="ba-before" src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/1c3557d6d-360f-4880-8b75-060aecb632e7.png" alt="Antes: Mariana no início do programa LEVE">
-        <span class="ba-tag antes">ANTES</span><span class="ba-tag depois">DEPOIS · 90 DIAS</span>
-        <div class="ba-line"><div class="ba-grip" id="baGrip" tabindex="0" role="slider" aria-label="Comparador antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">◂▸</div></div>
-      </div>
-      <p class="ba-cap"><b>Mariana R., 34 anos</b> — programa de 90 dias · resultado individual e ilustrativo.</p>
-    </div>
+<!-- ══════════ QUOTE BAND ══════════ -->
+<section class="quote-band">
+  <img class="band-bg" id="bandBg" src="https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/159f51040-55b6-4342-813c-f778a04318e0.png" alt="">
+  <div class="band-overlay"></div>
+  <div class="wrap quote-grid">
+    <blockquote class="rv">“É simples… mas traz <b>muito resultado</b>!”<cite>— a frase que mais ouvimos de quem termina o desafio</cite></blockquote>
+    <blockquote class="rv" style="--d:.15s">“Fala de um jeito muito bom de entender. <b>Muito inteligente</b>.”<cite>— o que dizem sobre a linguagem dos guias</cite></blockquote>
   </div>
 </section>
 
-<!-- MÉTODO -->
-<section class="sec method" id="metodo">
-  <div class="wrap m-grid">
-    <div class="m-left reveal">
-      <div class="kicker">O método LEVE°</div>
-      <h2>4 fases, 90 dias, uma nova relação com a <em>comida.</em></h2>
-      <p>Nada de choque: o método respeita seu metabolismo, sua rotina e seus horários — e muda o corpo mudando primeiro os hábitos.</p>
-      <div class="big">90<small>DIAS DE PROGRAMA</small></div>
+<!-- ══════════ RESULTADOS ══════════ -->
+<section class="resultados" id="resultados">
+  <div class="wrap">
+    <p class="eyebrow rv">Provas sociais</p>
+    <h2 class="rv" style="--d:.1s">Quem fez, <em>conta.</em></h2>
+    <div class="stats">
+      <div class="stat rv"><span class="stat-num" data-val="3412">0</span><span class="stat-label">pessoas já fizeram o reset</span></div>
+      <div class="stat rv" style="--d:.12s"><span class="stat-num" data-val="4.9" data-dec="1">0</span><span class="stat-label">nota média de avaliação</span></div>
+      <div class="stat rv" style="--d:.24s"><span class="stat-num" data-val="97" data-suffix="%">0</span><span class="stat-label">recomendariam o desafio</span></div>
+    </div>
+    <div class="t-grid" id="tGrid"></div>
+  </div>
+</section>
+
+<!-- ══════════ TRANSFORMAÇÃO: ANTES/DEPOIS ARRASTÁVEL ══════════ -->
+<section class="transformacao" id="transformacao">
+  <div class="wrap">
+    <p class="eyebrow rv" style="text-align:center">Transformação real</p>
+    <h2 class="rv" style="--d:.1s;text-align:center">7 dias que o espelho <em>confirma.</em></h2>
+    <p class="lead rv" style="--d:.2s;margin:0 auto;text-align:center">Menos inchaço, roupa mais solta, outra postura. Arraste a alça e compare o Dia 1 com o Dia 7 de quem fez o reset.</p>
+
+    <div class="ba-slider rv" style="--d:.3s" id="baSlider" tabindex="0" role="slider" aria-label="Comparação antes e depois do Desafio Reset de 7 Dias" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      <img class="ba-img" src="https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/168643982-4893-43cc-9137-1fbc4030a97f.png" alt="Depois de 7 dias de Desafio Reset: postura ereta, sorriso e roupa mais solta">
+      <div class="ba-clip"><img class="ba-img" src="https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/1d607c258-e815-4f1b-a7f6-14d7bdcf05d8.png" alt="Antes do Desafio Reset: cansaço e inchaço visível"></div>
+      <span class="ba-label lb">ANTES · DIA 1</span>
+      <span class="ba-label la">DEPOIS · DIA 7</span>
+      <div class="ba-handle"><button class="ba-grip" tabindex="-1" aria-hidden="true">◂&nbsp;▸</button></div>
+      <span class="ba-hint" id="baHint">arraste para comparar</span>
+    </div>
+
+    <div class="ba-chips rv" style="--d:.4s">
+      <span>−4,8 kg na balança</span><span>− inchaço visível</span><span>7 dias de método</span><span>0 proibições</span>
+    </div>
+    <p class="ba-caption rv" style="--d:.5s">Mariana, 34 anos — concluiu o Desafio Reset de 7 Dias. Resultado individual e ilustrativo.</p>
+  </div>
+</section>
+
+<div class="marquee rev" aria-hidden="true"><div class="marquee-track" id="mq2"></div></div>
+
+<!-- ══════════ GARANTIA ══════════ -->
+<section class="garantia dark" id="garantia">
+  <div class="wrap gar-grid">
+    <div class="seal-wrap rv">
+      <svg class="seal" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#circ">GARANTIA INCONDICIONAL • 7 DIAS • RISCO ZERO • GARANTIA INCONDICIONAL • 7 DIAS •</textPath></text>
+      </svg>
+      <div class="seal-core"><b>7</b><span>dias de<br>garantia</span></div>
     </div>
     <div>
-      <div class="phase reveal" data-n="1">
-        <span class="wk">Semanas 1–2</span><h3>Adaptação</h3>
-        <p>Reset metabólico suave: reeducação alimentar sem cortar grupos inteiros, hidratação e sono regulados. O corpo aprende a confiar em você de novo.</p>
-        <ul><li>Cardápio personalizado</li><li>Lista de compras LEVE</li><li>Protocolo de sono</li></ul>
-        <span class="mtr">▸ −2,1 kg de média nesta fase</span>
-      </div>
-      <div class="phase reveal" data-n="2">
-        <span class="wk">Semanas 3–8</span><h3>Queima</h3>
-        <p>Déficit calórico inteligente + treinos curtos de 20 minutos, 3x por semana, em casa. Sem academia, sem equipamento, sem desculpa.</p>
-        <ul><li>Treinos em vídeo</li><li>Check-in semanal com nutri</li><li>Metas de passos</li></ul>
-        <span class="mtr">▸ −4,6 kg de média nesta fase</span>
-      </div>
-      <div class="phase reveal" data-n="3">
-        <span class="wk">Semanas 9–12</span><h3>Consolidação</h3>
-        <p>Protocolos anti-platô e flexibilidade metabólica: refeições livres planejadas para o corpo nunca “acostumar” — e para você viver sem culpa.</p>
-        <ul><li>Refeed estratégico</li><li>Ajuste de macros</li><li>Leituras de medidas</li></ul>
-        <span class="mtr">▸ −1,9 kg de média nesta fase</span>
-      </div>
-      <div class="phase reveal" data-n="4">
-        <span class="wk">Pós-90 dias</span><h3>Manutenção</h3>
-        <p>Dieta reversa e acompanhamento mensal para segurar o resultado para sempre. É aqui que o efeito sanfona morre.</p>
-        <ul><li>Dieta reversa guiada</li><li>Comunidade vitalícia</li><li>Retorno trimestral</li></ul>
-        <span class="mtr">▸ 94% mantêm o peso após 1 ano</span>
-      </div>
+      <p class="eyebrow rv">Risco zero</p>
+      <h2 class="rv" style="--d:.1s">Você não tem nada a perder. <em>Literalmente.</em></h2>
+      <p class="lead rv" style="--d:.2s">Teste o Desafio Reset completo. Leia os guias, siga os dias, sinta a diferença no espelho e na energia. Se por qualquer motivo você achar que não é pra você, devolvemos tudo.</p>
+      <ul class="gar-list rv" style="--d:.3s">
+        <li><i>✓</i>100% do seu dinheiro de volta em até 7 dias após a compra</li>
+        <li><i>✓</i>Sem perguntas, sem burocracia, sem ressentimento</li>
+        <li><i>✓</i>Basta enviar um único e-mail</li>
+      </ul>
+      <a href="#" class="btn btn-primary js-buy rv" style="--d:.4s">Quero adquirir ainda hoje! <span class="btn-arrow">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- CARDÁPIO -->
-<section class="sec" id="cardapio">
+<!-- ══════════ FAQ ══════════ -->
+<section class="faq" id="faq">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker">Cardápio de exemplo</div>
-      <h2>Comer bem é o <em>combustível</em>, não o inimigo.</h2>
-      <p class="sub">Um dia típico no programa (~1.500 kcal). O seu cardápio é gerado para o seu metabolismo, suas preferências e suas restrições.</p>
-    </div>
-    <div class="meal-tabs reveal">
-      <button class="mtab on" data-meal="cafe">☕ Café da manhã</button>
-      <button class="mtab" data-meal="almoco">🍽 Almoço</button>
-      <button class="mtab" data-meal="jantar">🌙 Jantar</button>
-      <button class="mtab" data-meal="lanche">🍓 Lanches</button>
-    </div>
-
-    <div class="meal-panel on reveal" data-meal="cafe">
-      <div class="meal-img"><img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/18430cc38-4d86-4919-800a-cc8a37cad8ee.png" alt="Café da manhã saudável"><span class="meal-kcal">≈ 412 kcal</span></div>
-      <div class="meal-info"><h3>Começar o dia sem pressa</h3><p class="sub">Fibras + proteína para segurar a fome até o almoço.</p>
-        <div class="meal-row"><div><div class="nm">Mingau de aveia com banana e canela</div><div class="mc"><span class="c">C 42g</span><span class="p">P 9g</span><span class="g">G 7g</span></div></div><span class="kc">268 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">2 ovos mexidos com ervas</div><div class="mc"><span class="c">C 1g</span><span class="p">P 12g</span><span class="g">G 10g</span></div></div><span class="kc">144 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">Café preto ou chá sem açúcar</div><div class="mc"><span class="c">C 0g</span></div></div><span class="kc">0 kcal</span></div>
-        <p class="meal-note"><b>Substituições ilimitadas no app:</b> troque qualquer item por equivalente em macros com um toque.</p>
-      </div>
-    </div>
-
-    <div class="meal-panel" data-meal="almoco">
-      <div class="meal-img"><img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/15fc6a6f1-7b86-41c9-b937-27a4b5a0d8c9.png" alt="Almoço saudável"><span class="meal-kcal">≈ 556 kcal</span></div>
-      <div class="meal-info"><h3>Prato colorido, fome zero</h3><p class="sub">Metade vegetais, um quarto proteína, um quarto carboidrato bom.</p>
-        <div class="meal-row"><div><div class="nm">Frango grelhado (150 g)</div><div class="mc"><span class="p">P 42g</span><span class="g">G 6g</span></div></div><span class="kc">239 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">Quinoa cozida (4 col. de sopa)</div><div class="mc"><span class="c">C 24g</span><span class="p">P 4g</span></div></div><span class="kc">128 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">Brócolis + tomate-cereja assados</div><div class="mc"><span class="c">C 12g</span><span class="g">G 4g</span></div></div><span class="kc">96 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">Abacate (½ un.) + azeite (1 fio)</div><div class="mc"><span class="g">G 12g</span></div></div><span class="kc">93 kcal</span></div>
-        <p class="meal-note"><b>Regra do prato LEVE:</b> monte visualmente e nunca conte caloria na mesa.</p>
-      </div>
-    </div>
-
-    <div class="meal-panel" data-meal="jantar">
-      <div class="meal-img"><img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/186718687-bb5b-4618-b8d0-3d4c3bf320d2.png" alt="Jantar leve"><span class="meal-kcal">≈ 410 kcal</span></div>
-      <div class="meal-info"><h3>Leve para dormir melhor</h3><p class="sub">Proteína magra + vegetais: digestão fácil, sono profundo.</p>
-        <div class="meal-row"><div><div class="nm">Salmão assado com limão (130 g)</div><div class="mc"><span class="p">P 28g</span><span class="g">G 14g</span></div></div><span class="kc">242 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">Espaguete de abobrinha</div><div class="mc"><span class="c">C 8g</span></div></div><span class="kc">61 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">Salada de folhas com azeite</div><div class="mc"><span class="g">G 6g</span></div></div><span class="kc">107 kcal</span></div>
-        <p class="meal-note"><b>Janela do jantar:</b> até 2h antes de deitar — seu sono agradece, sua queima também.</p>
-      </div>
-    </div>
-
-    <div class="meal-panel" data-meal="lanche">
-      <div class="meal-img"><img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/1b98298cb-4c97-4423-8955-8cdc8e8f1536.png" alt="Lanche saudável"><span class="meal-kcal">≈ 210 kcal</span></div>
-      <div class="meal-info"><h3>A fome da tarde, domada</h3><p class="sub">O lanche que evita o assalto à geladeira às 22h.</p>
-        <div class="meal-row"><div><div class="nm">Iogurte natural com mel (100 g)</div><div class="mc"><span class="p">P 10g</span><span class="c">C 12g</span></div></div><span class="kc">100 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">Morangos + maçã em fatias</div><div class="mc"><span class="c">C 14g</span></div></div><span class="kc">72 kcal</span></div>
-        <div class="meal-row"><div><div class="nm">3 nozes</div><div class="mc"><span class="g">G 7g</span></div></div><span class="kc">38 kcal</span></div>
-        <p class="meal-note"><b>Crise de doce?</b> O app tem 40 sobremesas LEVE de até 150 kcal.</p>
-      </div>
-    </div>
+    <p class="eyebrow rv" style="text-align:center">Tire suas dúvidas</p>
+    <h2 class="rv" style="--d:.1s;text-align:center">Perguntas <em>frequentes</em></h2>
+    <div class="faq-list rv" id="faqList"></div>
+    <p class="faq-note rv">Ainda com dúvida? Fale com a gente: <a href="mailto:suporte@desafiorreset7dias.com.br">suporte@desafiorreset7dias.com.br</a></p>
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
-<section class="sec dep-sec" id="depoimentos">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker">Depoimentos</div>
-      <h2>Quem viveu, <em>conta.</em></h2>
+<!-- ══════════ OFERTA FINAL ══════════ -->
+<section class="oferta dark" id="oferta">
+  <span class="ghost g1">R</span><span class="ghost g2">7</span><span class="ghost g3">E</span>
+  <div class="wrap" style="position:relative">
+    <p class="eyebrow rv">Última chamada</p>
+    <h2 class="rv" style="--d:.1s">Seu reset começa <em>hoje.</em></h2>
+    <p class="lead rv" style="--d:.2s;margin:0 auto">Acesso imediato aos 8 guias, garantia incondicional de 7 dias e a condição especial desta semana — enquanto durarem os acessos.</p>
+    <div class="cd-wrap rv" style="--d:.3s">
+      <div class="cdbox"><b class="u-h">00</b><label>horas</label></div>
+      <span class="cd-colon">:</span>
+      <div class="cdbox"><b class="u-m">00</b><label>minutos</label></div>
+      <span class="cd-colon">:</span>
+      <div class="cdbox"><b class="u-s">00</b><label>segundos</label></div>
     </div>
-    <div class="pc-grid">
-      <div class="pc reveal" style="--r:-2.4deg"><span class="st">★★★★★</span><q>Nunca pensei que diria isso: hoje como arroz todo dia — e emagreci.</q><div class="who">Mariana R., 34</div><span class="res">−12,4 kg · 90 dias</span></div>
-      <div class="pc reveal" style="--r:1.8deg;--d:.08s"><span class="st">★★★★★</span><q>O acompanhamento mudou tudo. Pela primeira vez não foi no sofrimento.</q><div class="who">Ricardo A., 41</div><span class="res">−9,8 kg · 4 meses</span></div>
-      <div class="pc reveal" style="--r:-1.6deg;--d:.16s"><span class="st">★★★★★</span><q>As roupas voltaram a caber — mas o melhor foi a energia pra brincar com meu filho.</q><div class="who">Camila T., 28</div><span class="res">−15,2 kg · 6 meses</span></div>
-      <div class="pc reveal" style="--r:2.2deg;--d:.24s"><span class="st">★★★★★</span><q>Achei que na minha idade não tinha mais jeito. Tava errada.</q><div class="who">Lúcia M., 58</div><span class="res">−7,6 kg · 90 dias</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- PLANOS -->
-<section class="sec" id="planos">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="kicker">Planos</div>
-      <h2>Escolha o seu <em>ritmo.</em></h2>
-      <p class="sub">Cancele quando quiser. E, nos primeiros 30 dias, devolvemos 100% do valor se você não gostar.</p>
-    </div>
-    <div class="plans-grid">
-      <div class="plan reveal">
-        <h3>Start</h3><p class="for">Para começar no seu ritmo</p>
-        <div class="price">R$ 97<small>/mês</small></div>
-        <ul><li>App LEVE com cardápio por IA</li><li>Treinos em vídeo de 20 min</li><li>Painel de progresso e medidas</li><li>Comunidade de alunos</li></ul>
-        <a class="btn btn-o w100" href="#comecar">Assinar Start</a>
-      </div>
-      <div class="plan feat reveal" style="--d:.08s">
-        <span class="badge">★ MAIS ESCOLHIDO</span>
-        <h3>Leve+</h3><p class="for">Para quem quer companhia na jornada</p>
-        <div class="price">R$ 149<small>/mês</small></div>
-        <ul><li>Tudo do plano Start</li><li>Nutricionista semanal ao vivo</li><li>Grupos de apoio no WhatsApp</li><li>Ajustes de cardápio ilimitados</li><li>Lives de receitas LEVE</li></ul>
-        <a class="btn btn-c w100" href="#comecar">Assinar Leve+ <span class="ar">→</span></a>
-      </div>
-      <div class="plan reveal" style="--d:.16s">
-        <h3>Total</h3><p class="for">Transformação com tudo incluso</p>
-        <div class="price">R$ 207<small>/mês · anual</small></div>
-        <ul><li>Tudo do plano Leve+</li><li>Coach pessoal dedicado</li><li>Exames de bioimpedância</li><li>Consulta mensal por vídeo</li></ul>
-        <a class="btn btn-o w100" href="#comecar">Assinar Total</a>
-      </div>
-    </div>
-    <div class="guarantee reveal">
-      <div class="seal"><div><span>30</span><small>DIAS<br>GARANTIA</small></div></div>
-      <div><h3>Risco zero de verdade.</h3><p>Se em 30 dias você não sentir seu corpo e sua relação com a comida mudando, devolvemos cada centavo — sem perguntas, sem burocracia.</p></div>
+    <p class="vagas-line rv" style="--d:.4s">⚠ Restam apenas <b data-vagas>17</b> acessos nesta condição</p>
+    <a href="#" class="btn btn-primary pulse js-buy rv" style="--d:.5s;font-size:1.05rem;padding:22px 44px">Quero adquirir ainda hoje! <span class="btn-arrow">→</span></a>
+    <div class="trust-row rv" style="--d:.6s">
+      <div><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Compra 100% segura</div>
+      <div><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>Acesso imediato</div>
+      <div><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/></svg>Garantia de 7 dias</div>
     </div>
   </div>
 </section>
+</main>
 
-<!-- FAQ -->
-<section class="sec" id="faq" style="padding-top:2rem">
-  <div class="wrap faq-wrap">
-    <div class="sec-head reveal" style="text-align:center"><div class="kicker" style="justify-content:center">Dúvidas</div><h2>Perguntas <em>frequentes</em></h2></div>
-    <div class="faq-item reveal"><button class="faq-q">Quanto peso vou perder?<span class="pm">+</span></button><div class="faq-a"><p>A média das nossas alunas é de 4,2 kg por mês, mas o resultado depende do seu ponto de partida, adesão e metabolismo. O app projeta uma meta realista na primeira semana — e ajusta toda semana.</p></div></div>
-    <div class="faq-item reveal"><button class="faq-q">Preciso cortar carboidrato?<span class="pm">+</span></button><div class="faq-a"><p>Não. O método LEVE é baseado em reeducação alimentar: arroz, frutas e até sobremesas entram no plano, nas porções e combinações certas. Proibição é o que causa o efeito sanfona.</p></div></div>
-    <div class="faq-item reveal"><button class="faq-q">Preciso de academia ou equipamentos?<span class="pm">+</span></button><div class="faq-a"><p>Não. Os treinos são de 20 minutos, feitos em casa, só com o peso do corpo. Quem já treina pode conectar o plano de musculação ao app.</p></div></div>
-    <div class="faq-item reveal"><button class="faq-q">Como funciona o acompanhamento?<span class="pm">+</span></button><div class="faq-a"><p>Check-in semanal pelo app (peso, medidas e fotos), encontros ao vivo com nutricionistas nos planos Leve+ e Total, e suporte no WhatsApp em horário comercial.</p></div></div>
-    <div class="faq-item reveal"><button class="faq-q">Tenho restrições alimentares. Serve para mim?<span class="pm">+</span></button><div class="faq-a"><p>Sim: o cardápio é gerado respeitando vegetarianismo, intolerância à lactose, glúten, diabetes e outras condições — sempre com revisão de um nutri humano.</p></div></div>
-    <div class="faq-item reveal"><button class="faq-q">Posso cancelar quando quiser?<span class="pm">+</span></button><div class="faq-a"><p>Sim, direto no app, sem multa. E nos primeiros 30 dias a garantia é incondicional: devolvemos 100% do valor.</p></div></div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="sec cta" id="comecar">
-  <div class="wrap cta-grid">
-    <div class="reveal">
-      <div class="kicker">Comece hoje</div>
-      <h2>Sua primeira semana é por <em>nossa conta.</em></h2>
-      <p class="lead">Deixe seu contato e receba o plano inicial gratuito + uma conversa de 15 minutos com nossa equipe de nutrição.</p>
-      <form class="lead-form" id="leadForm" novalidate>
-        <input type="text" id="fNome" placeholder="Seu primeiro nome" autocomplete="name">
-        <input type="tel" id="fZap" placeholder="Seu WhatsApp · (11) 9…" autocomplete="tel">
-        <span class="err" id="fErr"></span>
-        <button class="btn btn-c" type="submit">Quero começar →</button>
-        <span class="micro">SEM COBRANÇA AGORA · CANCELE QUANDO QUISER · SEUS DADOS PROTEGIDOS</span>
-      </form>
-      <div class="lead-ok" id="leadOk" hidden></div>
-    </div>
-    <div class="cta-img reveal" style="--d:.1s">
-      <img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/162ab4b83-c62f-4f77-8567-466e4b68a803.png" alt="Dra. Helena Prado, nutricionista chefe do programa LEVE">
-      <span class="tag">Dra. Helena Prado · CRN 12.345 — nutri chefe</span>
-    </div>
-  </div>
-</section>
-
+<!-- ══════════ FOOTER ══════════ -->
 <footer>
-  <div class="wrap">
-    <div class="f-grid">
-      <div><a class="logo" href="#topo">LEVE<i>°</i></a><p>Emagrecimento definitivo, sem brigar com o espelho. Feito no Brasil, com ciência e acolhimento.</p></div>
-      <div><h4>Programa</h4><a href="#metodo">O método</a><a href="#resultados">Resultados</a><a href="#cardapio">Cardápio</a><a href="#planos">Planos</a></div>
-      <div><h4>Empresa</h4><a href="#">Sobre nós</a><a href="#">Time de nutris</a><a href="#">Blog LEVE</a><a href="#">Trabalhe conosco</a></div>
-      <div><h4>Legal</h4><a href="#">Termos de uso</a><a href="#">Privacidade</a><a href="#">Reembolsos</a></div>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#topo"><svg viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3 2.5.5 5 2.5 5 6a5 5 0 1 1-10 0c0-1.5.5-3 2-4.5.5 1 1.5 2 1.5 2z"/></svg>RESET<span>·7</span></a>
+      <p style="margin-top:14px">Desafio Reset de 7 Dias — 7 dias para reorganizar sua rotina e seu corpo.</p>
     </div>
-    <div class="f-bot">
-      <span>© 2026 LEVE° · todos os direitos reservados</span>
-      <span class="disc">Resultados variam de pessoa para pessoa. Este programa não substitui acompanhamento médico. Consulte sempre profissionais de saúde.</span>
+    <div class="foot-links">
+      <a href="#">Termos de uso</a>
+      <a href="#">Privacidade</a>
+      <a href="mailto:suporte@desafiorreset7dias.com.br">Contato</a>
     </div>
+    <p style="max-width:38ch">Os resultados podem variar de pessoa para pessoa. Este material não substitui orientação médica ou nutricional profissional.</p>
   </div>
 </footer>
 
+<!-- ══════════ BUYBAR ══════════ -->
+<div class="buybar" id="buybar">
+  <div class="buybar-info">
+    <strong>⚠ Últimas <b data-vagas>17</b> vagas desta condição</strong>
+    <span class="buybar-timer">Expira em
+      <span class="tiles">
+        <span class="tile"><b class="u-h">00</b></span><i>:</i>
+        <span class="tile"><b class="u-m">00</b></span><i>:</i>
+        <span class="tile"><b class="u-s">00</b></span>
+      </span>
+    </span>
+  </div>
+  <a href="#" class="btn btn-primary btn-sm js-buy">Quero adquirir ainda hoje!</a>
+</div>
+
 <script>
+/* ════════════ EDITE AQUI: LINK DO SEU CHECKOUT ════════════ */
+const CHECKOUT_URL = "";
+
+/* ════════════ EDITE AQUI: OS 7 DIAS DO MÉTODO ════════════ */
+const DIAS = [
+  {n:"01",t:"Limpeza & Decisão",d:"Antes de mudar o prato, você muda o ambiente. Remove gatilhos, organiza a cozinha e assina o contrato com você mesmo.",a:"Operação geladeira + primeira caminhada de 20 min."},
+  {n:"02",t:"Hidratação & Desinflamação",d:"Seu corpo começa a soltar o que não precisa mais. Água estratégica, chá desinflamante e os inflamatórios saem de cena.",a:"Protocolo de água + chá da tarde + jantar limpo."},
+  {n:"03",t:"Prato Inteligente",d:"Comer bem não é comer pouco. Metade vegetal, um quarto proteína, um quarto carboidrato — sem contar uma caloria sequer.",a:"Método do prato + ordem certa dos alimentos."},
+  {n:"04",t:"Movimento que Cabe na Vida",d:"10 minutos de micro-treino em casa + caminhada de 30 min. Sem academia, sem equipamento, sem desculpa.",a:"Circuito de 10 min + caminhada pós-almoço."},
+  {n:"05",t:"Sono & Recuperação",d:"Emagrecer também acontece dormindo. Você baixa o cortisol, janta mais cedo e aprende o ritual de desligar.",a:"Jantar até 20h + 30 min sem tela antes de dormir."},
+  {n:"06",t:"Aceleração Metabólica",d:"Com o corpo limpo, é hora de acelerar: timing das refeições, combinações certas e caminhada intervalada.",a:"Café estratégico + caminhada intervalada de 35 min."},
+  {n:"07",t:"Consolidação & Manutenção",d:"O fim do desafio, o começo da sua nova normalidade. O que manter, o que adaptar e o que soltar pra nunca voltar ao zero.",a:"Plano de manutenção + carta pra você mesmo."}
+];
+
+/* ════════════ EDITE AQUI: OS 8 GUIAS ════════════ */
+const GUIAS = [
+  {n:"00",tag:"O mapa",t:"Introdução — O Mapa do Reset",d:"A base de tudo: como o método funciona, as 5 regras do reset e o que esperar de cada dia."},
+  {n:"01",tag:"Dia 1",t:"Limpeza & Decisão",d:"Mude o ambiente antes de mudar o corpo. A decisão que sustenta os próximos 7 dias."},
+  {n:"02",tag:"Dia 2",t:"Hidratação & Desinflamação",d:"Seu corpo solta o que não precisa mais. Água, chá e os inflamatórios fora de cena."},
+  {n:"03",tag:"Dia 3",t:"Prato Inteligente",d:"Comer bem não é comer pouco. O método do prato que sacia sem contar caloria."},
+  {n:"04",tag:"Dia 4",t:"Movimento que Cabe na Vida",d:"10 minutos que valem mais que 1 hora de esteira. Sem academia, sem equipamento."},
+  {n:"05",tag:"Dia 5",t:"Sono & Recuperação",d:"O dia em que descansar vira estratégia. Cortisol baixo, corpo queimando enquanto dorme."},
+  {n:"06",tag:"Dia 6",t:"Aceleração Metabólica",d:"Timing, combinações e caminhada intervalada. Seu metabolismo trabalhando a seu favor."},
+  {n:"07",tag:"Dia 7",t:"Consolidação & Manutenção",d:"Transforme 7 dias em estilo de vida. Nunca mais volte ao zero."}
+];
+
+/* ════════════ EDITE AQUI: DEPOIMENTOS ════════════ */
+const DEPOIMENTOS = [
+  {nome:"Mariana R.", meta:"34 anos • Belo Horizonte/MG", tag:"−4,6kg", foto:"https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/190f4b787-33f0-4b1b-b272-76e70aa21cf7.png",
+   texto:"Eu já tinha tentado de tudo. O que me ganhou foi a simplicidade: cada dia eu sabia exatamente o que fazer. Perdi 4,6kg e o inchaço sumiu no terceiro dia."},
+  {nome:"Carlos E.", meta:"47 anos • Recife/PE", tag:"−5,1kg", foto:"https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/1bc69f7e9-8333-4841-8388-dd341b345f57.png",
+   texto:"Achei que seria mais uma dieta chata. Mas é direto ao ponto, sem enrolação. Fiz as caminhadas, ajustei o prato e foram 5,1kg embora em uma semana."},
+  {nome:"Juliana S.", meta:"29 anos • São Paulo/SP", tag:"−3,8kg", foto:"https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/15efaa300-65c8-4e09-a01c-16b0321c153c.png",
+   texto:"O guia do sono mudou tudo pra mim. Eu não sabia que dormir mal travava meu emagrecimento. Resultado: 3,8kg a menos e muito mais energia."},
+  {nome:"Fernanda L.", meta:"41 anos • Curitiba/PR", tag:"−6,2kg", foto:"https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/12479fdb9-3678-44f2-92f0-41d376b472cc.png",
+   texto:"Fala de um jeito muito bom de entender. Inteligente, simples, sem terrorismo nutricional. Terminei os 7 dias, mantive a rotina e já são 6,2kg."}
+];
+
+/* ════════════ EDITE AQUI: PERGUNTAS FREQUENTES ════════════ */
+const FAQ = [
+  {q:"Como vou receber os guias após a compra?", a:"Assim que o pagamento for confirmado, você recebe imediatamente no seu e-mail o acesso aos 8 guias em PDF (Introdução + Dia 1 ao Dia 7), prontos para ler no celular, tablet ou computador. Se preferir, também pode baixar e imprimir."},
+  {q:"Preciso fazer exercícios pesados ou ir à academia?", a:"Não. O método usa caminhadas guiadas e micro-treinos de 10 a 30 minutos que você faz em casa ou na rua, no seu ritmo. Nada de equipamento, mensalidade ou horas de treino."},
+  {q:"Vou passar fome ou cortar tudo o que gosto?", a:"Não. O Desafio Reset não é uma dieta restritiva. Você aprende a montar o prato de forma inteligente e come até se sentir satisfeito. Sua comida favorita continua no cardápio — com método, não com proibição."},
+  {q:"Tenho pouco tempo. Consigo seguir mesmo assim?", a:"Sim. Cada dia exige cerca de 30 minutos da sua rotina. As orientações são diretas e práticas, pensadas para quem trabalha, tem família e pouco tempo livre."},
+  {q:"Funciona para homens e mulheres de qualquer idade?", a:"O método foi desenhado para adultos em geral, com orientações adaptáveis ao seu ritmo. Se você tem alguma condição de saúde específica, recomendamos mostrar o material ao seu médico antes de começar."},
+  {q:"E se eu comprar e não gostar?", a:"Você tem 7 dias de garantia incondicional. Se não gostar por qualquer motivo, basta enviar um e-mail e devolvemos 100% do valor. Sem perguntas, sem burocracia."},
+  {q:"Por quanto tempo tenho acesso ao material?", a:"O acesso é vitalício. Os guias são seus para sempre — pode reler, revisar e refazer o desafio quantas vezes quiser."},
+  {q:"O resultado de 5kg é garantido?", a:"Os resultados variam de pessoa para pessoa. A média relatada por quem completa o desafio é de 3 a 5kg na primeira semana, combinando perda de gordura e redução de inchaço. O mais importante: o método constrói a rotina que sustenta o resultado."}
+];
+
+/* ═══════════ RENDERIZAÇÕES ═══════════ */
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* nav + progresso */
-const nav=document.getElementById('nav'),prog=document.getElementById('prog');
-addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>10);
- const h=document.documentElement;prog.style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%';},{passive:true});
-document.getElementById('burger').addEventListener('click',()=>nav.classList.toggle('open'));
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-addEventListener('load',()=>document.body.classList.add('loaded'));
-setTimeout(()=>document.body.classList.add('loaded'),300);
+document.getElementById('dayCards').innerHTML = DIAS.map(d=>`
+  <div class="day-card" data-day="${d.n}">
+    <div class="day-card-top"><span class="day-num">${d.n}</span><span class="day-chip">Foco do dia</span></div>
+    <h3>${d.t}</h3><p>${d.d}</p>
+    <div class="day-action">${d.a}</div>
+  </div>`).join('');
 
-/* ticker duplicado */
-const tk=document.getElementById('tkTrack');tk.innerHTML+=tk.innerHTML;
+document.getElementById('railNodes').innerHTML = DIAS.map(d=>`
+  <div class="rail-node" data-day="${d.n}"><i></i><span>DIA ${d.n}</span></div>`).join('');
 
-/* reveals + contadores */
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target);}}),{threshold:.6});
-document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
-function animCount(el){
-  const t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0);
-  const fmt=v=>v.toLocaleString('pt-BR',{minimumFractionDigits:dec,maximumFractionDigits:dec});
-  if(reduced){el.textContent=fmt(t);return;}
-  const t0=performance.now();
-  (function f(n){const p=Math.min(1,(n-t0)/1500),e=1-Math.pow(1-p,3);el.textContent=fmt(t*e);if(p<1)requestAnimationFrame(f);})(t0);
-}
+document.getElementById('guidesGrid').innerHTML = GUIAS.map(g=>`
+  <div class="g-card"><span class="g-tag">${g.tag}</span><div class="g-day">${g.n}</div><h4>${g.t}</h4><p>${g.d}</p></div>`).join('');
 
-/* ===== IMC ===== */
-const wIn=document.getElementById('wIn'),hIn=document.getElementById('hIn'),
- wVal=document.getElementById('wVal'),hVal=document.getElementById('hVal'),
- imcNum=document.getElementById('imcNum'),imcClass=document.getElementById('imcClass'),
- imcMeta=document.getElementById('imcMeta'),needle=document.getElementById('needle');
-function calcIMC(){
-  const w=+wIn.value,h=+hIn.value,m=h/100,imc=w/(m*m);
-  wVal.textContent=w;hVal.textContent=h;
-  imcNum.textContent=imc.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
-  const ang=Math.max(-90,Math.min(90,(imc-15)*7.2));
-  needle.style.transform=`translateX(-50%) rotate(${ang}deg)`;
-  const lo=Math.round(18.5*m*m),hi=Math.round(24.9*m*m);
-  let cls,bg,fg,meta;
-  if(imc<18.5){cls='Abaixo do peso';bg='rgba(119,169,207,.18)';fg='#3c6d94';meta=`Faixa saudável: ${lo}–${hi} kg · meta: ganhar massa com o plano de fortalecimento.`;}
-  else if(imc<25){cls='Peso saudável';bg='rgba(62,142,94,.15)';fg='var(--green)';meta=`Você está na faixa saudável! Meta agora: <b>disposição, medidas e manutenção</b>.`;}
-  else if(imc<30){cls='Sobrepeso';bg='rgba(242,178,62,.2)';fg='#a97b12';meta=`Faixa saudável: ${lo}–${hi} kg · meta sugerida: <b>−${Math.max(1,Math.round(w-24.9*m*m))} kg</b> em até 90 dias.`;}
-  else{cls='Obesidade';bg='rgba(226,88,47,.15)';fg='var(--rust)';meta=`Faixa saudável: ${lo}–${hi} kg · meta inicial: <b>−${Math.max(1,Math.round(w-24.9*m*m))} kg</b> com acompanhamento total.`;}
-  imcClass.textContent=cls;imcClass.style.background=bg;imcClass.style.color=fg;
-  imcMeta.innerHTML=meta;
-}
-wIn.addEventListener('input',calcIMC);hIn.addEventListener('input',calcIMC);calcIMC();
+document.getElementById('tGrid').innerHTML = DEPOIMENTOS.map(t=>`
+  <article class="t-card">
+    <div class="t-top"><img class="t-avatar" src="${t.foto}" alt="Foto de ${t.nome}">
+      <div><strong>${t.nome}</strong><small>${t.meta}</small></div>
+      <span class="t-tag">${t.tag}</span></div>
+    <span class="stars">★★★★★</span><p>“${t.texto}”</p>
+  </article>`).join('');
 
-/* ===== antes/depois ===== */
-const ba=document.getElementById('ba'),grip=document.getElementById('baGrip');
-let drag=false,baDone=false;
-function setP(p){p=Math.max(3,Math.min(97,p));ba.style.setProperty('--p',p+'%');grip.setAttribute('aria-valuenow',Math.round(p));}
-function moveBA(x){const r=ba.getBoundingClientRect();setP((x-r.left)/r.width*100);}
-ba.addEventListener('pointerdown',e=>{drag=true;ba.setPointerCapture(e.pointerId);moveBA(e.clientX);});
-ba.addEventListener('pointermove',e=>{if(drag)moveBA(e.clientX);});
-addEventListener('pointerup',()=>drag=false);
-grip.addEventListener('keydown',e=>{const cur=parseFloat(getComputedStyle(ba).getPropertyValue('--p'))||50;
- if(e.key==='ArrowLeft')setP(cur-4);if(e.key==='ArrowRight')setP(cur+4);});
-const baIO=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting&&!baDone){baDone=true;baIO.disconnect();
-    if(reduced){setP(50);return;}
-    const t0=performance.now();setP(90);
-    (function f(t){const p=Math.min(1,(t-t0)/1200),ea=1-Math.pow(1-p,3);setP(90-40*ea);if(p<1)requestAnimationFrame(f);})(t0);}
-}),{threshold:.4});
-baIO.observe(ba);
+document.getElementById('faqList').innerHTML = FAQ.map(f=>`
+  <div class="faq-item">
+    <button class="faq-q" aria-expanded="false"><span>${f.q}</span><span class="faq-ico">+</span></button>
+    <div class="faq-a"><div class="faq-a-in"><p>${f.a}</p></div></div>
+  </div>`).join('');
 
-/* ===== gráfico ===== */
-const CH=[84,83.1,82.4,81.2,80.6,79.8,78.9,78.4,77.6,77.1,76.2,75.4,74.8];
-const svg=document.getElementById('chartSvg'),tip=document.getElementById('chartTip');
-const W=640,H=280,pl=46,pr=14,pt=16,pb=34,yMin=73,yMax=85.5;
-const X=i=>pl+(W-pl-pr)*i/(CH.length-1), Y=v=>pt+(H-pt-pb)*(1-(v-yMin)/(yMax-yMin));
-(function build(){
-  let g='';for(let v=74;v<=84;v+=2)g+=`<line class="cg" x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}"/><text class="ct" x="${pl-8}" y="${Y(v)+3}" text-anchor="end">${v}</text>`;
-  let xl='';[0,3,6,9,12].forEach(w=>xl+=`<text class="ct" x="${X(w)}" y="${H-8}" text-anchor="middle">S${w}</text>`);
-  let line='';CH.forEach((v,i)=>line+=(i?' L':'M')+` ${X(i).toFixed(1)} ${Y(v).toFixed(1)}`);
-  const area=line+` L ${X(12)} ${H-pb} L ${X(0)} ${H-pb} Z`;
-  let dots='';CH.forEach((v,i)=>dots+=`<circle class="cd" cx="${X(i)}" cy="${Y(v)}" r="3.2"/>`);
-  svg.innerHTML=`<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2e7d4f" stop-opacity=".25"/><stop offset="1" stop-color="#2e7d4f" stop-opacity="0"/></linearGradient></defs>${g}${xl}<path id="chArea" d="${area}"/><path id="chLine" d="${line}"/>${dots}<line id="chX" class="cx" y1="${pt}" y2="${H-pb}"/><circle id="chPt" r="5.5"/>`;
+const mqItems = ["Sem dietas loucas","Sem academia","1 orientação por dia","Garantia de 7 dias","Sem passar fome","Acesso imediato","Rotina consistente"];
+const mqHTML = mqItems.map(i=>`<span><i>✦</i>${i}</span>`).join('');
+document.getElementById('mq1').innerHTML = mqHTML + mqHTML;
+
+const mq2Items = ["Ana C. perdeu 4,2kg","Rafael M. perdeu 5,0kg","Patrícia G. perdeu 3,5kg","Bruno T. perdeu 4,8kg","Camila F. perdeu 4,1kg","José A. perdeu 3,9kg","Luiza P. perdeu 4,4kg"];
+const mq2HTML = mq2Items.map(i=>`<span><i>✦</i>${i}</span>`).join('');
+document.getElementById('mq2').innerHTML = mq2HTML + mq2HTML;
+
+/* ═══════════ CHECKOUT ═══════════ */
+document.querySelectorAll('.js-buy').forEach(b=>{
+  if(CHECKOUT_URL) b.href = CHECKOUT_URL;
+  else b.addEventListener('click',e=>{e.preventDefault();document.getElementById('oferta').scrollIntoView({behavior:reduced?'auto':'smooth'});});
+});
+
+/* ═══════════ HERO + SCRAMBLE ═══════════ */
+requestAnimationFrame(()=>document.body.classList.add('on'));
+(function(){
+  const el = document.querySelector('.scramble');
+  if(!el || reduced) return;
+  const text = el.dataset.text, chars = '#0123456789RESET—+*';
+  let frame = 0, total = 46;
+  (function tick(){
+    frame++;
+    const settled = Math.floor((frame/total)*text.length);
+    let out = '';
+    for(let i=0;i<text.length;i++){
+      out += i<settled ? text[i] : (text[i]===' '?' ':chars[Math.random()*chars.length|0]);
+    }
+    el.textContent = out;
+    if(frame<total) requestAnimationFrame(tick); else el.textContent = text;
+  })();
 })();
-const chLine=document.getElementById('chLine');
-if(!reduced){
-  const L=chLine.getTotalLength();
-  chLine.style.strokeDasharray=L;chLine.style.strokeDashoffset=L;
-  document.getElementById('chArea').style.opacity=0;
-  const gIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){gIO.disconnect();
-    chLine.style.transition='stroke-dashoffset 1.8s cubic-bezier(.3,.7,.3,1)';
-    document.getElementById('chArea').style.transition='opacity 1s .9s';
-    requestAnimationFrame(()=>{chLine.style.strokeDashoffset=0;document.getElementById('chArea').style.opacity=1;});
-  }}),{threshold:.4});
-  gIO.observe(svg);
+
+/* ═══════════ REVEAL ═══════════ */
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* ═══════════ CONTADORES ═══════════ */
+function fmtNum(v,dec,suf){
+  let s = dec ? v.toFixed(dec).replace('.',',') : Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+  return s+(suf||'');
 }
-svg.addEventListener('pointermove',e=>{
-  const r=svg.getBoundingClientRect(),xs=(e.clientX-r.left)/r.width*W;
-  const i=Math.max(0,Math.min(CH.length-1,Math.round((xs-pl)/(W-pl-pr)*(CH.length-1))));
-  const cx=X(i),cy=Y(CH[i]);
-  const xl2=document.getElementById('chX'),pt2=document.getElementById('chPt');
-  xl2.setAttribute('x1',cx);xl2.setAttribute('x2',cx);xl2.style.opacity=1;
-  pt2.setAttribute('cx',cx);pt2.setAttribute('cy',cy);pt2.style.opacity=1;
-  tip.style.opacity=1;tip.style.left=(cx/W*100)+'%';tip.style.top=(cy/H*100)+'%';
-  tip.innerHTML=`Semana ${i} · <b>${CH[i].toLocaleString('pt-BR',{minimumFractionDigits:1})} kg</b> · −${(CH[0]-CH[i]).toLocaleString('pt-BR',{minimumFractionDigits:1})} kg`;
+const ioStats = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el = e.target, val = parseFloat(el.dataset.val), dec = parseInt(el.dataset.dec||0), suf = el.dataset.suffix||'';
+  ioStats.unobserve(el);
+  if(reduced){ el.textContent = fmtNum(val,dec,suf); return; }
+  const t0 = performance.now(), dur = 1400;
+  (function step(t){
+    const p = Math.min(1,(t-t0)/dur), ease = 1-Math.pow(1-p,3);
+    el.textContent = fmtNum(val*ease,dec,suf);
+    if(p<1) requestAnimationFrame(step);
+  })(t0);
+}),{threshold:.6});
+document.querySelectorAll('.stat-num').forEach(el=>ioStats.observe(el));
+
+/* ═══════════ TIMELINE DOS DIAS ═══════════ */
+const cards = [...document.querySelectorAll('.day-card')];
+const nodes = [...document.querySelectorAll('.rail-node')];
+const railFill = document.getElementById('railFill');
+const dayBig = document.getElementById('dayBig');
+const dayName = document.getElementById('dayName');
+const ioDay = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const day = parseInt(e.target.dataset.day);
+  cards.forEach(c=>c.classList.toggle('active',parseInt(c.dataset.day)===day));
+  nodes.forEach(n=>n.classList.toggle('on',parseInt(n.dataset.day)<=day));
+  railFill.style.height = (day/7*100)+'%';
+  dayBig.textContent = DIAS[day-1].n;
+  dayName.textContent = DIAS[day-1].t;
+}),{rootMargin:'-42% 0px -42% 0px'});
+cards.forEach(c=>ioDay.observe(c));
+
+/* ═══════════ ANTES/DEPOIS ARRASTÁVEL ═══════════ */
+const baSlider = document.getElementById('baSlider');
+let baPos = 50, baDrag = false, baTouched = false;
+function baApply(){
+  baSlider.style.setProperty('--pos', baPos+'%');
+  baSlider.setAttribute('aria-valuenow', Math.round(baPos));
+}
+function baFromX(clientX){
+  const r = baSlider.getBoundingClientRect();
+  baPos = Math.max(3, Math.min(97, ((clientX - r.left)/r.width)*100));
+  baApply();
+}
+function baTouch(){ if(!baTouched){ baTouched = true; baSlider.classList.add('touched'); } }
+baSlider.addEventListener('pointerdown', e=>{
+  baDrag = true; baTouch();
+  baSlider.setPointerCapture(e.pointerId);
+  baFromX(e.clientX);
 });
-svg.addEventListener('pointerleave',()=>{tip.style.opacity=0;
- document.getElementById('chX').style.opacity=0;document.getElementById('chPt').style.opacity=0;});
-
-/* cardápio tabs */
-document.querySelectorAll('.mtab').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.mtab').forEach(x=>x.classList.remove('on'));b.classList.add('on');
-  document.querySelectorAll('.meal-panel').forEach(p=>p.classList.toggle('on',p.dataset.meal===b.dataset.meal));
-}));
-
-/* faq */
-document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{
-  const it=btn.parentElement,was=it.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
-  if(!was){it.classList.add('open');const a=it.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';}
-}));
-
-/* form */
-document.getElementById('leadForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const nome=document.getElementById('fNome').value.trim(),
-        zap=document.getElementById('fZap').value.replace(/\D/g,''),
-        err=document.getElementById('fErr');
-  if(nome.length<2){err.textContent='→ conta pra gente o seu nome :)';return;}
-  if(zap.length<10){err.textContent='→ hmm, esse WhatsApp não parece completo.';return;}
-  err.textContent='';
-  document.getElementById('leadForm').hidden=true;
-  const ok=document.getElementById('leadOk');ok.hidden=false;
-  ok.innerHTML=`<b>Recebido, ${nome.split(' ')[0]}! 💚</b><br>Nossa equipe vai te chamar no WhatsApp em até 1 dia útil com seu plano inicial gratuito. Enquanto isso, respira fundo: a parte difícil você acabou de fazer.`;
+baSlider.addEventListener('pointermove', e=>{ if(baDrag) baFromX(e.clientX); });
+addEventListener('pointerup', ()=>baDrag=false);
+baSlider.addEventListener('pointercancel', ()=>baDrag=false);
+baSlider.addEventListener('keydown', e=>{
+  if(e.key==='ArrowLeft'){ baTouch(); baPos = Math.max(3, baPos-4); baApply(); e.preventDefault(); }
+  if(e.key==='ArrowRight'){ baTouch(); baPos = Math.min(97, baPos+4); baApply(); e.preventDefault(); }
 });
+/* varredura de apresentação: a alça se mexe sozinha 1x pra convidar ao arraste */
+if(!reduced){
+  const ioBa = new IntersectionObserver(es=>es.forEach(en=>{
+    if(!en.isIntersecting || baTouched) return;
+    ioBa.unobserve(baSlider);
+    const t0 = performance.now();
+    (function sweep(t){
+      if(baTouched) return;
+      const p = Math.min(1,(t-t0)/2400);
+      baPos = 50 + Math.sin(p*Math.PI*2)*30*(1-p);
+      baApply();
+      if(p<1) requestAnimationFrame(sweep); else { baPos=50; baApply(); }
+    })(t0);
+  }),{threshold:.55});
+  ioBa.observe(baSlider);
+}
+
+/* ═══════════ FAQ ═══════════ */
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item = btn.parentElement, open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');});
+    if(!open){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  });
+});
+
+/* ═══════════ COUNTDOWN ═══════════ */
+function setDigit(sel,val){
+  document.querySelectorAll(sel).forEach(el=>{
+    if(el.textContent!==val){
+      el.textContent=val;
+      if(!reduced){ el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); }
+    }
+  });
+}
+function tickCD(){
+  const now = new Date(), end = new Date(); end.setHours(23,59,59,999);
+  let d = Math.max(0,end-now);
+  setDigit('.u-h',String(Math.floor(d/36e5)).padStart(2,'0'));
+  setDigit('.u-m',String(Math.floor(d/6e4)%60).padStart(2,'0'));
+  setDigit('.u-s',String(Math.floor(d/1e3)%60).padStart(2,'0'));
+}
+tickCD(); setInterval(tickCD,1000);
+
+/* ═══════════ VAGAS + BARRA ═══════════ */
+const VAGAS_MAX = 20;
+let vagas = 17;
+const vagasBar = document.getElementById('vagasBar');
+function renderVagas(bump){
+  document.querySelectorAll('[data-vagas]').forEach(el=>{
+    el.textContent = vagas;
+    if(bump && !reduced){ el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
+  });
+  vagasBar.style.width = (vagas/VAGAS_MAX*100)+'%';
+}
+renderVagas(false);
+setInterval(()=>{ if(vagas>6 && Math.random()<.65){ vagas--; renderVagas(true); } }, 50000);
+
+/* ═══════════ HEADER + BUYBAR ═══════════ */
+const header = document.getElementById('header');
+const buybar = document.getElementById('buybar');
+let ofertaVisible = false;
+new IntersectionObserver(es=>es.forEach(e=>ofertaVisible=e.isIntersecting),{threshold:.2}).observe(document.getElementById('oferta'));
+addEventListener('scroll',()=>{
+  header.classList.toggle('scrolled', scrollY>10);
+  buybar.classList.toggle('show', scrollY>700 && !ofertaVisible);
+},{passive:true});
+
+/* ═══════════ PARALLAX QUOTE BAND ═══════════ */
+const bandBg = document.getElementById('bandBg');
+if(!reduced){
+  let ticking=false;
+  addEventListener('scroll',()=>{
+    if(ticking) return; ticking=true;
+    requestAnimationFrame(()=>{
+      const r = bandBg.parentElement.getBoundingClientRect();
+      bandBg.style.transform = `translateY(${r.top*-0.08}px)`;
+      ticking=false;
+    });
+  },{passive:true});
+}
+
+/* ═══════════ BOTÕES MAGNÉTICOS ═══════════ */
+if(matchMedia('(pointer:fine)').matches && !reduced){
+  document.querySelectorAll('.btn-primary').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{
+      const r = btn.getBoundingClientRect();
+      const x = (e.clientX-r.left-r.width/2)/r.width, y = (e.clientY-r.top-r.height/2)/r.height;
+      btn.style.transform = `translate(${x*8}px,${y*6}px)`;
+    });
+    btn.addEventListener('mouseleave',()=>btn.style.transform='');
+  });
+}
 </script>
 </body>
 </html>
