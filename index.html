@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEVE° — Emagrecimento definitivo, sem sofrimento</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/600.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/700.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/900.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/700-italic.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5/900-italic.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/400.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/500.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/600.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/700.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/800.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/space-mono@5/400.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/space-mono@5/700.css" rel="stylesheet">
+<style>
+:root{
+  --cream:#f7f1e6; --cream2:#efe5d3; --paper:#fffdf7;
+  --ink:#1b2a22; --ink2:#42544a; --mut:#6d7c71;
+  --green:#1e5b3f; --green-d:#113527; --leaf:#3e8e5e; --lime:#b9d18a;
+  --citrus:#f4622e; --sun:#f2b23e; --sky:#77a9cf; --rust:#e2582f;
+  --disp:'Fraunces',serif; --body:'Manrope',sans-serif; --mono:'Space Mono',monospace;
+  --sh:0 18px 44px -18px rgba(27,42,34,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.65;overflow-x:hidden}
+::selection{background:var(--citrus);color:#fff}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--cream2)}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:6px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--disp);line-height:1.04;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900}
+h2 em,h1 em{font-style:italic;color:var(--citrus)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--leaf);display:flex;align-items:center;gap:.7rem;font-weight:700}
+.kicker::before{content:"";width:26px;height:2px;background:var(--citrus)}
+.sec-head{margin-bottom:2.8rem}
+.sec-head p.sub{color:var(--mut);max-width:56ch;margin-top:.9rem}
+.sec{padding:6rem 0}
+.noise{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.045;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--citrus);width:0;z-index:90}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:70;transition:background .3s,box-shadow .3s;background:transparent}
+nav.scrolled{background:rgba(247,241,230,.9);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(27,42,34,.12)}
+.nav-in{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:2rem}
+.logo{font-family:var(--disp);font-weight:900;font-size:1.5rem;letter-spacing:-.02em;display:flex;align-items:baseline;gap:.15rem}
+.logo i{font-style:normal;color:var(--citrus)}
+.nav-links{display:flex;gap:1.7rem;margin-left:auto;font-weight:700;font-size:.88rem;color:var(--ink2)}
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;height:2px;width:0;background:var(--citrus);transition:width .3s}
+.nav-links a:hover{color:var(--ink)}.nav-links a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:99px;padding:.85rem 1.7rem;font-family:var(--body);font-weight:800;font-size:.93rem;border:none;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn .ar{transition:transform .25s}
+.btn:hover .ar{transform:translateX(4px)}
+.btn-p{background:var(--green);color:#fdf9ee;box-shadow:0 10px 26px -12px rgba(30,91,63,.7)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(30,91,63,.85)}
+.btn-c{background:var(--citrus);color:#fff;box-shadow:0 10px 26px -12px rgba(244,98,46,.7)}
+.btn-c:hover{transform:translateY(-2px)}
+.btn-o{background:transparent;border:2px solid var(--green);color:var(--green)}
+.btn-o:hover{background:var(--green);color:#fdf9ee}
+.burger{display:none;margin-left:auto;background:none;border:2px solid var(--green);border-radius:10px;color:var(--green);padding:.4rem .65rem;cursor:pointer;font-size:1rem;font-weight:800}
+@media(max-width:920px){.nav-links,.nav-cta{display:none}.burger{display:block}
+ nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);padding:1.4rem 24px;gap:1.1rem;box-shadow:var(--sh)}}
+
+/* hero */
+.hero{padding:150px 0 4.5rem;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-220px;right:-220px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(244,98,46,.14),transparent 65%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center;position:relative}
+.hero h1{font-size:clamp(3rem,7vw,5.4rem);font-weight:900;margin:1.4rem 0 1.3rem}
+.lm{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.lm-i{display:inline-block;transform:translateY(115%);transition:transform 1s cubic-bezier(.2,.75,.2,1);transition-delay:var(--d,0s)}
+body.loaded .lm-i{transform:none}
+.hero-sub{color:var(--ink2);max-width:50ch;font-size:1.05rem}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin:1.9rem 0 2.4rem}
+.hero-stats{display:flex;gap:2.4rem;flex-wrap:wrap}
+.hstat .n{font-family:var(--disp);font-weight:900;font-size:1.6rem}
+.hstat .n b{color:var(--citrus)}
+.hstat .l{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.leaf-deco{position:absolute;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(8deg) translateY(-8px)}}
+
+/* IMC card */
+.imc-card{background:var(--paper);border:2px solid var(--ink);border-radius:20px;padding:1.8rem;box-shadow:8px 8px 0 var(--sun);position:relative;transform:rotate(1.2deg)}
+.imc-head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:1.2rem}
+.imc-head b{color:var(--leaf)}
+.gauge{position:relative;width:230px;height:115px;margin:0 auto;border-radius:230px 230px 0 0;
+ background:conic-gradient(from -90deg at 50% 100%,var(--sky) 0 25.2deg,var(--leaf) 25.2deg 72deg,var(--sun) 72deg 108deg,var(--rust) 108deg 180deg,transparent 180deg 360deg)}
+.gauge-in{position:absolute;left:36px;right:36px;top:36px;bottom:0;border-radius:230px 230px 0 0;background:var(--paper)}
+.needle{position:absolute;left:50%;bottom:0;width:4px;height:88px;background:var(--ink);border-radius:4px;transform-origin:50% 100%;transform:translateX(-50%) rotate(17deg);transition:transform .8s cubic-bezier(.3,1.4,.4,1)}
+.needle::after{content:"";position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--citrus);border:3px solid var(--ink)}
+.gauge-val{text-align:center;margin-top:.7rem;font-family:var(--disp);font-weight:900;font-size:2.4rem;line-height:1}
+.gauge-val small{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;color:var(--mut);display:block;margin-top:.2rem}
+.imc-class{text-align:center;margin:.7rem auto 1.2rem;display:table;font-family:var(--mono);font-weight:700;font-size:.78rem;padding:.35rem .9rem;border-radius:99px}
+.imc-fields label{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:.9rem}
+.imc-fields b{color:var(--ink);font-size:.9rem}
+.imc-fields input[type=range]{width:100%;accent-color:var(--citrus);margin-top:.35rem;cursor:pointer}
+.imc-meta{background:var(--cream);border:1.5px dashed rgba(27,42,34,.25);border-radius:12px;padding:.8rem 1rem;font-size:.83rem;color:var(--ink2);margin-bottom:1.2rem}
+.imc-meta b{color:var(--citrus)}
+.w100{width:100%}
+
+/* ticker */
+.ticker{background:var(--green);color:#f2ecdd;overflow:hidden;padding:.9rem 0;transform:rotate(-1deg) scale(1.02)}
+.tk-track{display:flex;gap:2.6rem;width:max-content;animation:mar 26s linear infinite;font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.ticker:hover .tk-track{animation-play-state:paused}
+.tk-track i{font-style:normal;color:var(--sun)}
+@keyframes mar{to{transform:translateX(-50%)}}
+
+/* resultados */
+.res-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:2.4rem;align-items:stretch}
+.chart-card{background:var(--paper);border:1.5px solid rgba(27,42,34,.14);border-radius:20px;padding:1.6rem 1.6rem 1rem;box-shadow:var(--sh);position:relative}
+.chart-card h3{font-size:1.15rem;font-weight:700}
+.chart-card .lg{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.chart-wrap{position:relative;margin-top:.6rem}
+#chartSvg{width:100%;height:auto;display:block}
+.cg{stroke:rgba(27,42,34,.1);stroke-dasharray:3 5}
+.ct{font-family:var(--mono);font-size:10px;fill:var(--mut)}
+#chLine{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+#chArea{fill:url(#ag)}
+.cd{fill:var(--paper);stroke:var(--green);stroke-width:2}
+.cx{stroke:var(--citrus);stroke-width:1.5;stroke-dasharray:4 4;opacity:0}
+#chPt{fill:var(--citrus);stroke:var(--paper);stroke-width:2.5;opacity:0}
+.chart-tip{position:absolute;transform:translate(-50%,-135%);background:var(--ink);color:var(--cream);font-family:var(--mono);font-size:.7rem;padding:.45rem .7rem;border-radius:8px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s}
+.chart-tip b{color:var(--sun)}
+.res-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.res-stat{background:var(--paper);border:1.5px solid rgba(27,42,34,.14);border-radius:18px;padding:1.4rem 1.2rem;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .3s,box-shadow .3s}
+.res-stat:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+.res-stat .n{font-family:var(--disp);font-weight:900;font-size:2.1rem;color:var(--green)}
+.res-stat:nth-child(2) .n{color:var(--citrus)}
+.res-stat .l{font-size:.78rem;color:var(--mut);font-weight:600}
+.res-note{grid-column:1/-1;font-family:var(--mono);font-size:.66rem;color:var(--mut)}
+
+/* antes/depois */
+.ba-sec{background:var(--cream2)}
+.ba-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:center}
+.ba-quote{font-family:var(--disp);font-style:italic;font-weight:700;font-size:1.3rem;color:var(--ink2);border-left:4px solid var(--citrus);padding-left:1.2rem;margin:1.6rem 0}
+.ba-chips{display:flex;gap:.7rem;flex-wrap:wrap}
+.ba-chips span{font-family:var(--mono);font-weight:700;font-size:.78rem;background:var(--paper);border:1.5px solid var(--ink);border-radius:99px;padding:.45rem .95rem}
+.ba-chips .hi{background:var(--citrus);color:#fff;border-color:var(--citrus)}
+.ba{position:relative;border-radius:22px;overflow:hidden;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--leaf);aspect-ratio:4/3.4;cursor:ew-resize;touch-action:none;user-select:none}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba-before{clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:var(--paper);transform:translateX(-50%);z-index:3}
+.ba-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:var(--citrus);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem;box-shadow:0 6px 18px rgba(0,0,0,.35);letter-spacing:-1px}
+.ba-grip:focus-visible{outline:3px solid var(--ink)}
+.ba-tag{position:absolute;top:14px;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.18em;padding:.4rem .8rem;border-radius:99px;z-index:2}
+.ba-tag.antes{left:14px;background:var(--ink);color:var(--cream)}
+.ba-tag.depois{right:14px;background:var(--leaf);color:#fff}
+.ba-cap{margin-top:1rem;font-size:.85rem;color:var(--mut)}
+.ba-cap b{color:var(--ink)}
+
+/* método (dark) */
+.method{background:var(--green-d);color:#f2ecdd}
+.method .kicker{color:var(--lime)}
+.method h2 em{color:var(--sun)}
+.m-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4.5rem}
+.m-left{position:sticky;top:110px;align-self:start}
+.m-left p{color:#c9d6c2;max-width:42ch;margin-top:1rem}
+.m-left .big{font-family:var(--disp);font-weight:900;font-size:5rem;color:transparent;-webkit-text-stroke:2px var(--lime);line-height:1;margin-top:2rem}
+.m-left .big small{font-size:1.2rem;-webkit-text-stroke:1px var(--lime);display:block;font-family:var(--mono);letter-spacing:.2em}
+.phase{position:relative;padding:0 0 3rem 2.6rem;border-left:2px dashed rgba(242,236,221,.25)}
+.phase:last-child{padding-bottom:.5rem;border-left-color:transparent}
+.phase::before{content:attr(data-n);position:absolute;left:-1.35rem;top:0;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--green-d);border:2px solid var(--sun);color:var(--sun);display:grid;place-items:center;font-family:var(--disp);font-weight:900}
+.phase .wk{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:var(--lime);text-transform:uppercase}
+.phase h3{font-size:1.5rem;font-weight:700;margin:.4rem 0 .6rem;color:#fdf9ee}
+.phase p{color:#c9d6c2;font-size:.95rem;max-width:52ch}
+.phase ul{list-style:none;margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.phase li{font-family:var(--mono);font-size:.7rem;background:rgba(185,209,138,.12);border:1px solid rgba(185,209,138,.35);color:var(--lime);border-radius:99px;padding:.35rem .8rem}
+.phase .mtr{margin-top:.9rem;display:inline-block;font-family:var(--mono);font-weight:700;font-size:.78rem;color:var(--sun)}
+
+/* cardápio */
+.meal-tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
+.mtab{font-family:var(--mono);font-weight:700;font-size:.78rem;padding:.6rem 1.2rem;border-radius:99px;border:2px solid rgba(27,42,34,.2);background:transparent;color:var(--ink2);cursor:pointer;transition:all .25s}
+.mtab:hover{border-color:var(--green);color:var(--green)}
+.mtab.on{background:var(--green);border-color:var(--green);color:#fdf9ee}
+.meal-panel{display:none;grid-template-columns:340px 1fr;gap:2.6rem;background:var(--paper);border:1.5px solid rgba(27,42,34,.14);border-radius:22px;padding:2rem;box-shadow:var(--sh)}
+.meal-panel.on{display:grid;animation:fadeUp .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.meal-img{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1}
+.meal-img img{width:100%;height:100%;object-fit:cover;transition:transform 5s ease}
+.meal-panel:hover .meal-img img{transform:scale(1.09)}
+.meal-kcal{position:absolute;bottom:12px;left:12px;background:var(--citrus);color:#fff;font-family:var(--mono);font-weight:700;font-size:.78rem;padding:.45rem .9rem;border-radius:99px}
+.meal-info h3{font-size:1.5rem;font-weight:900;margin-bottom:.3rem}
+.meal-info .sub{color:var(--mut);font-size:.9rem;margin-bottom:1.2rem}
+.meal-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1.5px dashed rgba(27,42,34,.15)}
+.meal-row:last-of-type{border-bottom:none}
+.meal-row .nm{font-weight:700;font-size:.95rem}
+.meal-row .mc{display:flex;gap:.35rem;margin-top:.3rem}
+.mc span{font-family:var(--mono);font-size:.62rem;border-radius:6px;padding:.15rem .45rem;border:1px solid}
+.mc .c{color:#a97b12;border-color:rgba(242,178,62,.6)}
+.mc .p{color:var(--leaf);border-color:rgba(62,142,94,.5)}
+.mc .g{color:var(--citrus);border-color:rgba(244,98,46,.5)}
+.meal-row .kc{font-family:var(--mono);font-weight:700;font-size:.85rem;white-space:nowrap}
+.meal-note{margin-top:1.1rem;background:var(--cream);border-radius:12px;padding:.8rem 1rem;font-size:.82rem;color:var(--ink2)}
+.meal-note b{color:var(--green)}
+
+/* depoimentos */
+.dep-sec{background:var(--cream2);overflow:hidden}
+.pc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.pc{background:var(--paper);border:1.5px solid rgba(27,42,34,.16);border-radius:6px;padding:1.6rem 1.4rem 1.3rem;position:relative;transform:rotate(var(--r,0deg));transition:transform .35s,box-shadow .35s;box-shadow:0 8px 22px -12px rgba(27,42,34,.3)}
+.pc:hover{transform:rotate(0deg) translateY(-8px);box-shadow:var(--sh)}
+.pc::before{content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(-2deg);width:86px;height:22px;background:rgba(242,178,62,.55)}
+.pc .st{color:var(--sun);letter-spacing:.15em;font-size:.85rem}
+.pc q{display:block;font-family:var(--disp);font-style:italic;font-weight:600;font-size:1rem;margin:.8rem 0 1rem;quotes:"“" "”"}
+.pc .who{font-weight:800;font-size:.88rem}
+.pc .res{font-family:var(--mono);font-weight:700;font-size:.7rem;color:var(--citrus);display:block;margin-top:.2rem}
+@media(max-width:1000px){.pc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pc-grid{grid-template-columns:1fr}}
+
+/* planos */
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;align-items:stretch}
+.plan{background:var(--paper);border:1.5px solid rgba(27,42,34,.16);border-radius:20px;padding:2.2rem 1.9rem;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;position:relative}
+.plan:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.plan h3{font-size:1.4rem;font-weight:900}
+.plan .for{font-size:.82rem;color:var(--mut);margin:.3rem 0 1.4rem}
+.plan .price{font-family:var(--disp);font-weight:900;font-size:2.6rem;line-height:1}
+.plan .price small{font-family:var(--mono);font-size:.72rem;color:var(--mut);font-weight:400}
+.plan ul{list-style:none;margin:1.6rem 0 2rem;flex:1}
+.plan li{padding:.5rem 0;font-size:.9rem;color:var(--ink2);display:flex;gap:.6rem}
+.plan li::before{content:"✓";color:var(--leaf);font-weight:800}
+.plan.feat{background:var(--green);color:#f2ecdd;border-color:var(--green);transform:scale(1.045);box-shadow:0 26px 60px -24px rgba(30,91,63,.65)}
+.plan.feat:hover{transform:scale(1.045) translateY(-6px)}
+.plan.feat .for,.plan.feat .price small{color:#bcd0b6}
+.plan.feat li{color:#dcead6}.plan.feat li::before{color:var(--sun)}
+.plan .badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--citrus);color:#fff;font-family:var(--mono);font-weight:700;font-size:.66rem;letter-spacing:.16em;padding:.45rem 1.1rem;border-radius:99px;white-space:nowrap}
+.guarantee{margin-top:3rem;display:flex;gap:1.6rem;align-items:center;background:var(--paper);border:2px dashed var(--leaf);border-radius:20px;padding:1.6rem 2rem}
+.seal{flex-shrink:0;width:92px;height:92px;border-radius:50%;background:var(--green);color:#fdf9ee;display:grid;place-items:center;text-align:center;font-family:var(--disp);font-weight:900;line-height:1;transform:rotate(-8deg);box-shadow:4px 4px 0 var(--sun)}
+.seal span{font-size:1.5rem}.seal small{font-family:var(--mono);font-size:.5rem;letter-spacing:.12em}
+.guarantee h3{font-size:1.15rem;font-weight:900}
+.guarantee p{color:var(--mut);font-size:.9rem}
+@media(max-width:960px){.plans-grid{grid-template-columns:1fr}.plan.feat{transform:none}.plan.feat:hover{transform:translateY(-6px)}}
+
+/* faq */
+.faq-wrap{max-width:800px;margin:0 auto}
+.faq-item{background:var(--paper);border:1.5px solid rgba(27,42,34,.14);border-radius:14px;margin-bottom:.8rem;overflow:hidden;transition:border-color .3s}
+.faq-item.open{border-color:var(--green)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;font-family:var(--body);font-weight:800;font-size:1rem;color:var(--ink);padding:1.2rem 1.4rem;cursor:pointer;text-align:left}
+.faq-q .pm{font-family:var(--disp);font-weight:900;font-size:1.3rem;color:var(--citrus);transition:transform .3s;flex-shrink:0}
+.faq-item.open .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.7,.2,1)}
+.faq-a p{padding:0 1.4rem 1.3rem;color:var(--mut);font-size:.93rem}
+
+/* cta */
+.cta{background:var(--green-d);color:#f2ecdd;overflow:hidden}
+.cta-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.cta h2 em{color:var(--sun)}
+.cta p.lead{color:#c9d6c2;margin:1rem 0 2rem;max-width:48ch}
+.lead-form{display:flex;flex-direction:column;gap:.9rem;max-width:440px}
+.lead-form input{background:rgba(253,249,238,.08);border:1.5px solid rgba(242,236,221,.3);border-radius:12px;padding:.95rem 1.2rem;color:#fdf9ee;font-family:var(--body);font-size:.95rem;transition:border-color .25s}
+.lead-form input::placeholder{color:#93a68e}
+.lead-form input:focus{outline:none;border-color:var(--sun)}
+.lead-form .err{color:#ffb3a0;font-size:.78rem;font-family:var(--mono);min-height:1em}
+.lead-ok{background:rgba(185,209,138,.12);border:1.5px solid var(--lime);border-radius:16px;padding:1.6rem;font-size:.95rem;max-width:440px}
+.lead-ok b{color:var(--lime)}
+.micro{font-family:var(--mono);font-size:.66rem;color:#93a68e;margin-top:.9rem;letter-spacing:.06em}
+.cta-img{border-radius:22px;overflow:hidden;border:2px solid rgba(242,236,221,.25);position:relative}
+.cta-img img{width:100%;height:100%;object-fit:cover;animation:kb 14s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+.cta-img .tag{position:absolute;bottom:14px;left:14px;background:var(--paper);color:var(--ink);font-family:var(--mono);font-weight:700;font-size:.68rem;padding:.5rem .9rem;border-radius:99px}
+
+/* footer */
+footer{background:var(--green-d);color:#bcd0b6;border-top:1px solid rgba(242,236,221,.15);padding:3.5rem 0 2rem}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+.f-grid .logo{color:#fdf9ee}
+.f-grid p{font-size:.85rem;max-width:30ch;margin-top:.7rem}
+.f-grid h4{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#93a68e;margin-bottom:1rem}
+.f-grid a{display:block;font-size:.87rem;margin-bottom:.5rem;transition:color .2s}
+.f-grid a:hover{color:var(--sun)}
+.f-bot{border-top:1px solid rgba(242,236,221,.15);padding-top:1.5rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.66rem;color:#93a68e}
+.f-bot .disc{max-width:70ch}
+@media(max-width:800px){.f-grid{grid-template-columns:1fr 1fr}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+ .hero-grid,.ba-grid,.m-grid,.cta-grid,.res-grid{grid-template-columns:1fr}
+ .m-left{position:static}
+ .meal-panel{grid-template-columns:1fr}
+ .imc-card{transform:none}
+}
+@media (prefers-reduced-motion: reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .reveal{opacity:1;transform:none}
+ .lm-i{transform:none}
+ .tk-track{animation:none!important;flex-wrap:wrap;width:auto}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div class="noise"></div>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#topo">LEVE<i>°</i></a>
+    <div class="nav-links">
+      <a href="#resultados">Resultados</a><a href="#transformacao">Transformações</a>
+      <a href="#metodo">Método</a><a href="#cardapio">Cardápio</a>
+      <a href="#planos">Planos</a><a href="#faq">Dúvidas</a>
+    </div>
+    <a class="btn btn-c nav-cta" href="#comecar" style="padding:.65rem 1.3rem">Começar agora</a>
+    <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Programa LEVE° · emagrecimento definitivo</div>
+      <h1>
+        <span class="lm"><span class="lm-i" style="--d:.1s">Menos peso.</span></span>
+        <span class="lm"><span class="lm-i" style="--d:.28s">Mais <em>leveza.</em></span></span>
+      </h1>
+      <p class="hero-sub">Reeducação alimentar, treinos de 20 minutos e acompanhamento de nutricionistas de verdade — <strong>sem dieta maluca, sem passar fome</strong>, sem efeito sanfona.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-c" href="#comecar">Quero meu plano grátis <span class="ar">→</span></a>
+        <a class="btn btn-o" href="#metodo">Conhecer o método</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="n">−<b><span data-count="4.2" data-dec="1">0</span></b> kg</div><div class="l">média por mês</div></div>
+        <div class="hstat"><div class="n"><b><span data-count="38">0</span></b> mil</div><div class="l">alunas e alunos</div></div>
+        <div class="hstat"><div class="n"><b><span data-count="94">0</span>%</b></div><div class="l">concluem 90 dias</div></div>
+      </div>
+    </div>
+
+    <div class="imc-card reveal">
+      <div class="imc-head"><span>Calculadora LEVE°</span><b>● ao vivo</b></div>
+      <div class="gauge"><div class="gauge-in"></div><div class="needle" id="needle"></div></div>
+      <div class="gauge-val"><span id="imcNum">29,8</span><small>SEU IMC</small></div>
+      <div class="imc-class" id="imcClass">Sobrepeso</div>
+      <div class="imc-fields">
+        <label>Peso · <b id="wVal">84</b> kg<input type="range" id="wIn" min="40" max="160" value="84" aria-label="Peso em quilos"></label>
+        <label>Altura · <b id="hVal">168</b> cm<input type="range" id="hIn" min="140" max="200" value="168" aria-label="Altura em centímetros"></label>
+      </div>
+      <div class="imc-meta" id="imcMeta"></div>
+      <a class="btn btn-p w100" href="#planos">Ver meu plano ideal <span class="ar">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="tk-track" id="tkTrack">
+    <span>Sem dieta maluca <i>✦</i></span><span>Sem passar fome <i>✦</i></span>
+    <span>Nutris de verdade <i>✦</i></span><span>Resultado em 90 dias <i>✦</i></span>
+    <span>Garantia de 30 dias <i>✦</i></span><span>+38 mil vidas leves <i>✦</i></span>
+    <span>100% online <i>✦</i></span><span>Treinos de 20 min <i>✦</i></span>
+  </div>
+</div>
+
+<!-- RESULTADOS -->
+<section class="sec" id="resultados">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Resultados reais</div>
+      <h2>Na balança — e <em>na vida.</em></h2>
+      <p class="sub">Acompanhe a curva média de quem segue o programa por 12 semanas. Passe o mouse pelo gráfico para ver semana a semana.</p>
+    </div>
+    <div class="res-grid">
+      <div class="chart-card reveal">
+        <h3>Curva de emagrecimento · 12 semanas</h3>
+        <span class="lg">peso médio (kg) · últimas 1.000 alunas</span>
+        <div class="chart-wrap" id="chartWrap">
+          <svg id="chartSvg" viewBox="0 0 640 280" role="img" aria-label="Gráfico de perda de peso ao longo de 12 semanas"></svg>
+          <div class="chart-tip" id="chartTip"></div>
+        </div>
+      </div>
+      <div class="res-col">
+        <div class="res-stat reveal"><div class="n">−<span data-count="8.6" data-dec="1">0</span> kg</div><div class="l">perda média em 90 dias</div></div>
+        <div class="res-stat reveal" style="--d:.08s"><div class="n">−<span data-count="9.4" data-dec="1">0</span> cm</div><div class="l">de cintura, em média</div></div>
+        <div class="res-stat reveal" style="--d:.16s"><div class="n"><span data-count="72">0</span>%</div><div class="l">relatam mais energia e sono melhor</div></div>
+        <div class="res-stat reveal" style="--d:.24s"><div class="n"><span data-count="4.9" data-dec="1">0</span>★</div><div class="l">satisfação média no app</div></div>
+        <div class="res-note reveal">* dados internos da turma de jan–jun/2026. Resultados variam por pessoa.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANTES / DEPOIS -->
+<section class="sec ba-sec" id="transformacao">
+  <div class="wrap ba-grid">
+    <div class="reveal">
+      <div class="kicker">Transformações</div>
+      <h2>A prova está <em>na foto.</em></h2>
+      <p class="ba-quote">Eu não virei outra pessoa. Eu me reencontrei.</p>
+      <p style="color:var(--mut);font-size:.95rem">Mariana entrou no programa com 84 kg, duas dietas frustradas no currículo e zero vontade de ir à academia. Noventa dias depois, a balança — e o espelho — contam a história. <strong style="color:var(--ink)">Arraste a divisor e veja você também.</strong></p>
+      <div class="ba-chips" style="margin-top:1.4rem">
+        <span class="hi">−12,4 kg</span><span>−14 cm cintura</span><span>90 dias</span><span>0 dietas restritivas</span>
+      </div>
+    </div>
+    <div class="reveal" style="--d:.1s">
+      <div class="ba" id="ba" style="--p:50%">
+        <img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/16f00c020-bc58-4ecf-b4bb-95dd102f1fe2.png" alt="Depois: Mariana após 90 dias no programa LEVE">
+        <img class="ba-before" src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/1c3557d6d-360f-4880-8b75-060aecb632e7.png" alt="Antes: Mariana no início do programa LEVE">
+        <span class="ba-tag antes">ANTES</span><span class="ba-tag depois">DEPOIS · 90 DIAS</span>
+        <div class="ba-line"><div class="ba-grip" id="baGrip" tabindex="0" role="slider" aria-label="Comparador antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">◂▸</div></div>
+      </div>
+      <p class="ba-cap"><b>Mariana R., 34 anos</b> — programa de 90 dias · resultado individual e ilustrativo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="sec method" id="metodo">
+  <div class="wrap m-grid">
+    <div class="m-left reveal">
+      <div class="kicker">O método LEVE°</div>
+      <h2>4 fases, 90 dias, uma nova relação com a <em>comida.</em></h2>
+      <p>Nada de choque: o método respeita seu metabolismo, sua rotina e seus horários — e muda o corpo mudando primeiro os hábitos.</p>
+      <div class="big">90<small>DIAS DE PROGRAMA</small></div>
+    </div>
+    <div>
+      <div class="phase reveal" data-n="1">
+        <span class="wk">Semanas 1–2</span><h3>Adaptação</h3>
+        <p>Reset metabólico suave: reeducação alimentar sem cortar grupos inteiros, hidratação e sono regulados. O corpo aprende a confiar em você de novo.</p>
+        <ul><li>Cardápio personalizado</li><li>Lista de compras LEVE</li><li>Protocolo de sono</li></ul>
+        <span class="mtr">▸ −2,1 kg de média nesta fase</span>
+      </div>
+      <div class="phase reveal" data-n="2">
+        <span class="wk">Semanas 3–8</span><h3>Queima</h3>
+        <p>Déficit calórico inteligente + treinos curtos de 20 minutos, 3x por semana, em casa. Sem academia, sem equipamento, sem desculpa.</p>
+        <ul><li>Treinos em vídeo</li><li>Check-in semanal com nutri</li><li>Metas de passos</li></ul>
+        <span class="mtr">▸ −4,6 kg de média nesta fase</span>
+      </div>
+      <div class="phase reveal" data-n="3">
+        <span class="wk">Semanas 9–12</span><h3>Consolidação</h3>
+        <p>Protocolos anti-platô e flexibilidade metabólica: refeições livres planejadas para o corpo nunca “acostumar” — e para você viver sem culpa.</p>
+        <ul><li>Refeed estratégico</li><li>Ajuste de macros</li><li>Leituras de medidas</li></ul>
+        <span class="mtr">▸ −1,9 kg de média nesta fase</span>
+      </div>
+      <div class="phase reveal" data-n="4">
+        <span class="wk">Pós-90 dias</span><h3>Manutenção</h3>
+        <p>Dieta reversa e acompanhamento mensal para segurar o resultado para sempre. É aqui que o efeito sanfona morre.</p>
+        <ul><li>Dieta reversa guiada</li><li>Comunidade vitalícia</li><li>Retorno trimestral</li></ul>
+        <span class="mtr">▸ 94% mantêm o peso após 1 ano</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARDÁPIO -->
+<section class="sec" id="cardapio">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Cardápio de exemplo</div>
+      <h2>Comer bem é o <em>combustível</em>, não o inimigo.</h2>
+      <p class="sub">Um dia típico no programa (~1.500 kcal). O seu cardápio é gerado para o seu metabolismo, suas preferências e suas restrições.</p>
+    </div>
+    <div class="meal-tabs reveal">
+      <button class="mtab on" data-meal="cafe">☕ Café da manhã</button>
+      <button class="mtab" data-meal="almoco">🍽 Almoço</button>
+      <button class="mtab" data-meal="jantar">🌙 Jantar</button>
+      <button class="mtab" data-meal="lanche">🍓 Lanches</button>
+    </div>
+
+    <div class="meal-panel on reveal" data-meal="cafe">
+      <div class="meal-img"><img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/18430cc38-4d86-4919-800a-cc8a37cad8ee.png" alt="Café da manhã saudável"><span class="meal-kcal">≈ 412 kcal</span></div>
+      <div class="meal-info"><h3>Começar o dia sem pressa</h3><p class="sub">Fibras + proteína para segurar a fome até o almoço.</p>
+        <div class="meal-row"><div><div class="nm">Mingau de aveia com banana e canela</div><div class="mc"><span class="c">C 42g</span><span class="p">P 9g</span><span class="g">G 7g</span></div></div><span class="kc">268 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">2 ovos mexidos com ervas</div><div class="mc"><span class="c">C 1g</span><span class="p">P 12g</span><span class="g">G 10g</span></div></div><span class="kc">144 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">Café preto ou chá sem açúcar</div><div class="mc"><span class="c">C 0g</span></div></div><span class="kc">0 kcal</span></div>
+        <p class="meal-note"><b>Substituições ilimitadas no app:</b> troque qualquer item por equivalente em macros com um toque.</p>
+      </div>
+    </div>
+
+    <div class="meal-panel" data-meal="almoco">
+      <div class="meal-img"><img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/15fc6a6f1-7b86-41c9-b937-27a4b5a0d8c9.png" alt="Almoço saudável"><span class="meal-kcal">≈ 556 kcal</span></div>
+      <div class="meal-info"><h3>Prato colorido, fome zero</h3><p class="sub">Metade vegetais, um quarto proteína, um quarto carboidrato bom.</p>
+        <div class="meal-row"><div><div class="nm">Frango grelhado (150 g)</div><div class="mc"><span class="p">P 42g</span><span class="g">G 6g</span></div></div><span class="kc">239 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">Quinoa cozida (4 col. de sopa)</div><div class="mc"><span class="c">C 24g</span><span class="p">P 4g</span></div></div><span class="kc">128 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">Brócolis + tomate-cereja assados</div><div class="mc"><span class="c">C 12g</span><span class="g">G 4g</span></div></div><span class="kc">96 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">Abacate (½ un.) + azeite (1 fio)</div><div class="mc"><span class="g">G 12g</span></div></div><span class="kc">93 kcal</span></div>
+        <p class="meal-note"><b>Regra do prato LEVE:</b> monte visualmente e nunca conte caloria na mesa.</p>
+      </div>
+    </div>
+
+    <div class="meal-panel" data-meal="jantar">
+      <div class="meal-img"><img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/186718687-bb5b-4618-b8d0-3d4c3bf320d2.png" alt="Jantar leve"><span class="meal-kcal">≈ 410 kcal</span></div>
+      <div class="meal-info"><h3>Leve para dormir melhor</h3><p class="sub">Proteína magra + vegetais: digestão fácil, sono profundo.</p>
+        <div class="meal-row"><div><div class="nm">Salmão assado com limão (130 g)</div><div class="mc"><span class="p">P 28g</span><span class="g">G 14g</span></div></div><span class="kc">242 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">Espaguete de abobrinha</div><div class="mc"><span class="c">C 8g</span></div></div><span class="kc">61 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">Salada de folhas com azeite</div><div class="mc"><span class="g">G 6g</span></div></div><span class="kc">107 kcal</span></div>
+        <p class="meal-note"><b>Janela do jantar:</b> até 2h antes de deitar — seu sono agradece, sua queima também.</p>
+      </div>
+    </div>
+
+    <div class="meal-panel" data-meal="lanche">
+      <div class="meal-img"><img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/1b98298cb-4c97-4423-8955-8cdc8e8f1536.png" alt="Lanche saudável"><span class="meal-kcal">≈ 210 kcal</span></div>
+      <div class="meal-info"><h3>A fome da tarde, domada</h3><p class="sub">O lanche que evita o assalto à geladeira às 22h.</p>
+        <div class="meal-row"><div><div class="nm">Iogurte natural com mel (100 g)</div><div class="mc"><span class="p">P 10g</span><span class="c">C 12g</span></div></div><span class="kc">100 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">Morangos + maçã em fatias</div><div class="mc"><span class="c">C 14g</span></div></div><span class="kc">72 kcal</span></div>
+        <div class="meal-row"><div><div class="nm">3 nozes</div><div class="mc"><span class="g">G 7g</span></div></div><span class="kc">38 kcal</span></div>
+        <p class="meal-note"><b>Crise de doce?</b> O app tem 40 sobremesas LEVE de até 150 kcal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="sec dep-sec" id="depoimentos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Depoimentos</div>
+      <h2>Quem viveu, <em>conta.</em></h2>
+    </div>
+    <div class="pc-grid">
+      <div class="pc reveal" style="--r:-2.4deg"><span class="st">★★★★★</span><q>Nunca pensei que diria isso: hoje como arroz todo dia — e emagreci.</q><div class="who">Mariana R., 34</div><span class="res">−12,4 kg · 90 dias</span></div>
+      <div class="pc reveal" style="--r:1.8deg;--d:.08s"><span class="st">★★★★★</span><q>O acompanhamento mudou tudo. Pela primeira vez não foi no sofrimento.</q><div class="who">Ricardo A., 41</div><span class="res">−9,8 kg · 4 meses</span></div>
+      <div class="pc reveal" style="--r:-1.6deg;--d:.16s"><span class="st">★★★★★</span><q>As roupas voltaram a caber — mas o melhor foi a energia pra brincar com meu filho.</q><div class="who">Camila T., 28</div><span class="res">−15,2 kg · 6 meses</span></div>
+      <div class="pc reveal" style="--r:2.2deg;--d:.24s"><span class="st">★★★★★</span><q>Achei que na minha idade não tinha mais jeito. Tava errada.</q><div class="who">Lúcia M., 58</div><span class="res">−7,6 kg · 90 dias</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="sec" id="planos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Planos</div>
+      <h2>Escolha o seu <em>ritmo.</em></h2>
+      <p class="sub">Cancele quando quiser. E, nos primeiros 30 dias, devolvemos 100% do valor se você não gostar.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan reveal">
+        <h3>Start</h3><p class="for">Para começar no seu ritmo</p>
+        <div class="price">R$ 97<small>/mês</small></div>
+        <ul><li>App LEVE com cardápio por IA</li><li>Treinos em vídeo de 20 min</li><li>Painel de progresso e medidas</li><li>Comunidade de alunos</li></ul>
+        <a class="btn btn-o w100" href="#comecar">Assinar Start</a>
+      </div>
+      <div class="plan feat reveal" style="--d:.08s">
+        <span class="badge">★ MAIS ESCOLHIDO</span>
+        <h3>Leve+</h3><p class="for">Para quem quer companhia na jornada</p>
+        <div class="price">R$ 149<small>/mês</small></div>
+        <ul><li>Tudo do plano Start</li><li>Nutricionista semanal ao vivo</li><li>Grupos de apoio no WhatsApp</li><li>Ajustes de cardápio ilimitados</li><li>Lives de receitas LEVE</li></ul>
+        <a class="btn btn-c w100" href="#comecar">Assinar Leve+ <span class="ar">→</span></a>
+      </div>
+      <div class="plan reveal" style="--d:.16s">
+        <h3>Total</h3><p class="for">Transformação com tudo incluso</p>
+        <div class="price">R$ 207<small>/mês · anual</small></div>
+        <ul><li>Tudo do plano Leve+</li><li>Coach pessoal dedicado</li><li>Exames de bioimpedância</li><li>Consulta mensal por vídeo</li></ul>
+        <a class="btn btn-o w100" href="#comecar">Assinar Total</a>
+      </div>
+    </div>
+    <div class="guarantee reveal">
+      <div class="seal"><div><span>30</span><small>DIAS<br>GARANTIA</small></div></div>
+      <div><h3>Risco zero de verdade.</h3><p>Se em 30 dias você não sentir seu corpo e sua relação com a comida mudando, devolvemos cada centavo — sem perguntas, sem burocracia.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:2rem">
+  <div class="wrap faq-wrap">
+    <div class="sec-head reveal" style="text-align:center"><div class="kicker" style="justify-content:center">Dúvidas</div><h2>Perguntas <em>frequentes</em></h2></div>
+    <div class="faq-item reveal"><button class="faq-q">Quanto peso vou perder?<span class="pm">+</span></button><div class="faq-a"><p>A média das nossas alunas é de 4,2 kg por mês, mas o resultado depende do seu ponto de partida, adesão e metabolismo. O app projeta uma meta realista na primeira semana — e ajusta toda semana.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Preciso cortar carboidrato?<span class="pm">+</span></button><div class="faq-a"><p>Não. O método LEVE é baseado em reeducação alimentar: arroz, frutas e até sobremesas entram no plano, nas porções e combinações certas. Proibição é o que causa o efeito sanfona.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Preciso de academia ou equipamentos?<span class="pm">+</span></button><div class="faq-a"><p>Não. Os treinos são de 20 minutos, feitos em casa, só com o peso do corpo. Quem já treina pode conectar o plano de musculação ao app.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Como funciona o acompanhamento?<span class="pm">+</span></button><div class="faq-a"><p>Check-in semanal pelo app (peso, medidas e fotos), encontros ao vivo com nutricionistas nos planos Leve+ e Total, e suporte no WhatsApp em horário comercial.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Tenho restrições alimentares. Serve para mim?<span class="pm">+</span></button><div class="faq-a"><p>Sim: o cardápio é gerado respeitando vegetarianismo, intolerância à lactose, glúten, diabetes e outras condições — sempre com revisão de um nutri humano.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Posso cancelar quando quiser?<span class="pm">+</span></button><div class="faq-a"><p>Sim, direto no app, sem multa. E nos primeiros 30 dias a garantia é incondicional: devolvemos 100% do valor.</p></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec cta" id="comecar">
+  <div class="wrap cta-grid">
+    <div class="reveal">
+      <div class="kicker">Comece hoje</div>
+      <h2>Sua primeira semana é por <em>nossa conta.</em></h2>
+      <p class="lead">Deixe seu contato e receba o plano inicial gratuito + uma conversa de 15 minutos com nossa equipe de nutrição.</p>
+      <form class="lead-form" id="leadForm" novalidate>
+        <input type="text" id="fNome" placeholder="Seu primeiro nome" autocomplete="name">
+        <input type="tel" id="fZap" placeholder="Seu WhatsApp · (11) 9…" autocomplete="tel">
+        <span class="err" id="fErr"></span>
+        <button class="btn btn-c" type="submit">Quero começar →</button>
+        <span class="micro">SEM COBRANÇA AGORA · CANCELE QUANDO QUISER · SEUS DADOS PROTEGIDOS</span>
+      </form>
+      <div class="lead-ok" id="leadOk" hidden></div>
+    </div>
+    <div class="cta-img reveal" style="--d:.1s">
+      <img src="https://image.qwenlm.ai/public_source/c9662fac-e0c2-4bbf-9ce2-f074ce485913/162ab4b83-c62f-4f77-8567-466e4b68a803.png" alt="Dra. Helena Prado, nutricionista chefe do programa LEVE">
+      <span class="tag">Dra. Helena Prado · CRN 12.345 — nutri chefe</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div><a class="logo" href="#topo">LEVE<i>°</i></a><p>Emagrecimento definitivo, sem brigar com o espelho. Feito no Brasil, com ciência e acolhimento.</p></div>
+      <div><h4>Programa</h4><a href="#metodo">O método</a><a href="#resultados">Resultados</a><a href="#cardapio">Cardápio</a><a href="#planos">Planos</a></div>
+      <div><h4>Empresa</h4><a href="#">Sobre nós</a><a href="#">Time de nutris</a><a href="#">Blog LEVE</a><a href="#">Trabalhe conosco</a></div>
+      <div><h4>Legal</h4><a href="#">Termos de uso</a><a href="#">Privacidade</a><a href="#">Reembolsos</a></div>
+    </div>
+    <div class="f-bot">
+      <span>© 2026 LEVE° · todos os direitos reservados</span>
+      <span class="disc">Resultados variam de pessoa para pessoa. Este programa não substitui acompanhamento médico. Consulte sempre profissionais de saúde.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* nav + progresso */
+const nav=document.getElementById('nav'),prog=document.getElementById('prog');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>10);
+ const h=document.documentElement;prog.style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%';},{passive:true});
+document.getElementById('burger').addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+addEventListener('load',()=>document.body.classList.add('loaded'));
+setTimeout(()=>document.body.classList.add('loaded'),300);
+
+/* ticker duplicado */
+const tk=document.getElementById('tkTrack');tk.innerHTML+=tk.innerHTML;
+
+/* reveals + contadores */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target);}}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+function animCount(el){
+  const t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0);
+  const fmt=v=>v.toLocaleString('pt-BR',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+  if(reduced){el.textContent=fmt(t);return;}
+  const t0=performance.now();
+  (function f(n){const p=Math.min(1,(n-t0)/1500),e=1-Math.pow(1-p,3);el.textContent=fmt(t*e);if(p<1)requestAnimationFrame(f);})(t0);
+}
+
+/* ===== IMC ===== */
+const wIn=document.getElementById('wIn'),hIn=document.getElementById('hIn'),
+ wVal=document.getElementById('wVal'),hVal=document.getElementById('hVal'),
+ imcNum=document.getElementById('imcNum'),imcClass=document.getElementById('imcClass'),
+ imcMeta=document.getElementById('imcMeta'),needle=document.getElementById('needle');
+function calcIMC(){
+  const w=+wIn.value,h=+hIn.value,m=h/100,imc=w/(m*m);
+  wVal.textContent=w;hVal.textContent=h;
+  imcNum.textContent=imc.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
+  const ang=Math.max(-90,Math.min(90,(imc-15)*7.2));
+  needle.style.transform=`translateX(-50%) rotate(${ang}deg)`;
+  const lo=Math.round(18.5*m*m),hi=Math.round(24.9*m*m);
+  let cls,bg,fg,meta;
+  if(imc<18.5){cls='Abaixo do peso';bg='rgba(119,169,207,.18)';fg='#3c6d94';meta=`Faixa saudável: ${lo}–${hi} kg · meta: ganhar massa com o plano de fortalecimento.`;}
+  else if(imc<25){cls='Peso saudável';bg='rgba(62,142,94,.15)';fg='var(--green)';meta=`Você está na faixa saudável! Meta agora: <b>disposição, medidas e manutenção</b>.`;}
+  else if(imc<30){cls='Sobrepeso';bg='rgba(242,178,62,.2)';fg='#a97b12';meta=`Faixa saudável: ${lo}–${hi} kg · meta sugerida: <b>−${Math.max(1,Math.round(w-24.9*m*m))} kg</b> em até 90 dias.`;}
+  else{cls='Obesidade';bg='rgba(226,88,47,.15)';fg='var(--rust)';meta=`Faixa saudável: ${lo}–${hi} kg · meta inicial: <b>−${Math.max(1,Math.round(w-24.9*m*m))} kg</b> com acompanhamento total.`;}
+  imcClass.textContent=cls;imcClass.style.background=bg;imcClass.style.color=fg;
+  imcMeta.innerHTML=meta;
+}
+wIn.addEventListener('input',calcIMC);hIn.addEventListener('input',calcIMC);calcIMC();
+
+/* ===== antes/depois ===== */
+const ba=document.getElementById('ba'),grip=document.getElementById('baGrip');
+let drag=false,baDone=false;
+function setP(p){p=Math.max(3,Math.min(97,p));ba.style.setProperty('--p',p+'%');grip.setAttribute('aria-valuenow',Math.round(p));}
+function moveBA(x){const r=ba.getBoundingClientRect();setP((x-r.left)/r.width*100);}
+ba.addEventListener('pointerdown',e=>{drag=true;ba.setPointerCapture(e.pointerId);moveBA(e.clientX);});
+ba.addEventListener('pointermove',e=>{if(drag)moveBA(e.clientX);});
+addEventListener('pointerup',()=>drag=false);
+grip.addEventListener('keydown',e=>{const cur=parseFloat(getComputedStyle(ba).getPropertyValue('--p'))||50;
+ if(e.key==='ArrowLeft')setP(cur-4);if(e.key==='ArrowRight')setP(cur+4);});
+const baIO=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting&&!baDone){baDone=true;baIO.disconnect();
+    if(reduced){setP(50);return;}
+    const t0=performance.now();setP(90);
+    (function f(t){const p=Math.min(1,(t-t0)/1200),ea=1-Math.pow(1-p,3);setP(90-40*ea);if(p<1)requestAnimationFrame(f);})(t0);}
+}),{threshold:.4});
+baIO.observe(ba);
+
+/* ===== gráfico ===== */
+const CH=[84,83.1,82.4,81.2,80.6,79.8,78.9,78.4,77.6,77.1,76.2,75.4,74.8];
+const svg=document.getElementById('chartSvg'),tip=document.getElementById('chartTip');
+const W=640,H=280,pl=46,pr=14,pt=16,pb=34,yMin=73,yMax=85.5;
+const X=i=>pl+(W-pl-pr)*i/(CH.length-1), Y=v=>pt+(H-pt-pb)*(1-(v-yMin)/(yMax-yMin));
+(function build(){
+  let g='';for(let v=74;v<=84;v+=2)g+=`<line class="cg" x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}"/><text class="ct" x="${pl-8}" y="${Y(v)+3}" text-anchor="end">${v}</text>`;
+  let xl='';[0,3,6,9,12].forEach(w=>xl+=`<text class="ct" x="${X(w)}" y="${H-8}" text-anchor="middle">S${w}</text>`);
+  let line='';CH.forEach((v,i)=>line+=(i?' L':'M')+` ${X(i).toFixed(1)} ${Y(v).toFixed(1)}`);
+  const area=line+` L ${X(12)} ${H-pb} L ${X(0)} ${H-pb} Z`;
+  let dots='';CH.forEach((v,i)=>dots+=`<circle class="cd" cx="${X(i)}" cy="${Y(v)}" r="3.2"/>`);
+  svg.innerHTML=`<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2e7d4f" stop-opacity=".25"/><stop offset="1" stop-color="#2e7d4f" stop-opacity="0"/></linearGradient></defs>${g}${xl}<path id="chArea" d="${area}"/><path id="chLine" d="${line}"/>${dots}<line id="chX" class="cx" y1="${pt}" y2="${H-pb}"/><circle id="chPt" r="5.5"/>`;
+})();
+const chLine=document.getElementById('chLine');
+if(!reduced){
+  const L=chLine.getTotalLength();
+  chLine.style.strokeDasharray=L;chLine.style.strokeDashoffset=L;
+  document.getElementById('chArea').style.opacity=0;
+  const gIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){gIO.disconnect();
+    chLine.style.transition='stroke-dashoffset 1.8s cubic-bezier(.3,.7,.3,1)';
+    document.getElementById('chArea').style.transition='opacity 1s .9s';
+    requestAnimationFrame(()=>{chLine.style.strokeDashoffset=0;document.getElementById('chArea').style.opacity=1;});
+  }}),{threshold:.4});
+  gIO.observe(svg);
+}
+svg.addEventListener('pointermove',e=>{
+  const r=svg.getBoundingClientRect(),xs=(e.clientX-r.left)/r.width*W;
+  const i=Math.max(0,Math.min(CH.length-1,Math.round((xs-pl)/(W-pl-pr)*(CH.length-1))));
+  const cx=X(i),cy=Y(CH[i]);
+  const xl2=document.getElementById('chX'),pt2=document.getElementById('chPt');
+  xl2.setAttribute('x1',cx);xl2.setAttribute('x2',cx);xl2.style.opacity=1;
+  pt2.setAttribute('cx',cx);pt2.setAttribute('cy',cy);pt2.style.opacity=1;
+  tip.style.opacity=1;tip.style.left=(cx/W*100)+'%';tip.style.top=(cy/H*100)+'%';
+  tip.innerHTML=`Semana ${i} · <b>${CH[i].toLocaleString('pt-BR',{minimumFractionDigits:1})} kg</b> · −${(CH[0]-CH[i]).toLocaleString('pt-BR',{minimumFractionDigits:1})} kg`;
+});
+svg.addEventListener('pointerleave',()=>{tip.style.opacity=0;
+ document.getElementById('chX').style.opacity=0;document.getElementById('chPt').style.opacity=0;});
+
+/* cardápio tabs */
+document.querySelectorAll('.mtab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.mtab').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  document.querySelectorAll('.meal-panel').forEach(p=>p.classList.toggle('on',p.dataset.meal===b.dataset.meal));
+}));
+
+/* faq */
+document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{
+  const it=btn.parentElement,was=it.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+  if(!was){it.classList.add('open');const a=it.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';}
+}));
+
+/* form */
+document.getElementById('leadForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const nome=document.getElementById('fNome').value.trim(),
+        zap=document.getElementById('fZap').value.replace(/\D/g,''),
+        err=document.getElementById('fErr');
+  if(nome.length<2){err.textContent='→ conta pra gente o seu nome :)';return;}
+  if(zap.length<10){err.textContent='→ hmm, esse WhatsApp não parece completo.';return;}
+  err.textContent='';
+  document.getElementById('leadForm').hidden=true;
+  const ok=document.getElementById('leadOk');ok.hidden=false;
+  ok.innerHTML=`<b>Recebido, ${nome.split(' ')[0]}! 💚</b><br>Nossa equipe vai te chamar no WhatsApp em até 1 dia útil com seu plano inicial gratuito. Enquanto isso, respira fundo: a parte difícil você acabou de fazer.`;
+});
+</script>
+</body>
+</html>
