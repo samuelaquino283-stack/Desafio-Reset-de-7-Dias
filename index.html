@@ -47,7 +47,7 @@ body::-webkit-scrollbar{width:10px}
 body::-webkit-scrollbar-track{background:var(--cream2)}
 body::-webkit-scrollbar-thumb{background:linear-gradient(var(--blood),var(--pine));border-radius:6px}
 body::after{content:"";position:fixed;inset:0;z-index:998;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
-background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* ---------- preloader ---------- */
 .preloader{position:fixed;inset:0;z-index:2000;background:radial-gradient(700px 400px at 70% 30%,rgba(196,39,27,.25),transparent 60%),var(--ink);display:flex;align-items:center;justify-content:center;transition:opacity .7s ease,visibility .7s}
@@ -578,23 +578,162 @@ footer p{max-width:56ch}
 <section class="transformacao" id="transformacao">
   <div class="wrap">
     <p class="eyebrow rv" style="text-align:center">Transformação real</p>
-    <h2 class="rv" style="--d:.1s" data-split>7 dias que o espelho <em>confirma.</em></h2>
-    <p class="lead rv" style="--d:.2s;margin:0 auto;text-align:center">Menos inchaço, roupa mais solta, outra postura. Arraste a alça e compare o Dia 1 com o Dia 7 de quem fez o reset.</p>
-
-    <div class="ba-slider rv" style="--d:.3s" id="baSlider" tabindex="0" role="slider" aria-label="Comparação antes e depois do Desafio Reset de 7 Dias" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-      <img class="ba-img" src="https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/168643982-4893-43cc-9137-1fbc4030a97f.png" alt="Depois de 7 dias de Desafio Reset: postura ereta, sorriso e roupa mais solta">
-      <div class="ba-clip"><img class="ba-img" src="https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/1d607c258-e815-4f1b-a7f6-14d7bdcf05d8.png" alt="Antes do Desafio Reset: cansaço e inchaço visível"></div>
-      <span class="ba-label lb">ANTES · DIA 1</span>
-      <span class="ba-label la">DEPOIS · DIA 7</span>
-      <div class="ba-handle"><button class="ba-grip" tabindex="-1" aria-hidden="true">◂&nbsp;▸</button></div>
-      <span class="ba-hint" id="baHint">arraste para comparar</span>
-    </div>
-
-    <div class="ba-chips rv" style="--d:.4s">
-      <span>−4,8 kg na balança</span><span>− inchaço visível</span><span>7 dias de método</span><span>0 proibições</span>
-    </div>
-    <p class="ba-caption rv" style="--d:.5s">Mariana, 34 anos — concluiu o Desafio Reset de 7 Dias. Resultado individual e ilustrativo.</p>
+    <h2 class="rv" style="--d:.1s; text-align:center" data-split>7 dias que o espelho <em>confirma.</em></h2>
+    <p class="lead rv" style="--d:.2s;margin:0 auto;text-align:center">Menos inchaço, roupa mais solta, outra postura. Compare o Dia 1 com o Dia 7 de quem fez o reset.</p>
   </div>
+
+  <style>
+    .tr7-shell{
+      width:100%;
+      margin-top:clamp(30px,4.5vw,56px);
+      padding:clamp(24px,3.4vw,44px) 0 clamp(30px,4vw,50px);
+      background:linear-gradient(180deg,rgba(23,8,7,.06),rgba(23,8,7,0) 85%);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .tr7-marquee{
+      position:relative;
+      overflow:hidden;
+      max-width:100%;
+      padding:16px 0 34px;
+      -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+      mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+    }
+    .tr7-track{
+      display:flex;
+      align-items:center;
+      width:max-content;
+      animation:tr7-scroll 44s linear infinite;
+      will-change:transform;
+    }
+    .tr7-marquee:hover .tr7-track,
+    .tr7-marquee:active .tr7-track{animation-play-state:paused}
+    .tr7-group{display:flex;align-items:center;flex:0 0 auto}
+    .tr7-item{
+      flex:0 0 auto;
+      box-sizing:border-box;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:clamp(300px,46vw,440px);
+      padding:12px clamp(12px,1.8vw,24px);
+    }
+    .tr7-item img{
+      display:block;
+      max-width:min(78vw,460px);
+      max-height:100%;
+      width:auto;
+      height:auto;
+      border-radius:16px;
+      box-shadow:0 10px 22px rgba(23,8,7,.18),0 26px 60px rgba(23,8,7,.28);
+      transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;
+      user-select:none;
+      -webkit-user-select:none;
+    }
+    .tr7-item:hover img{
+      transform:translateY(-6px) scale(1.02);
+      box-shadow:0 16px 30px rgba(23,8,7,.22),0 36px 80px rgba(23,8,7,.34);
+    }
+    @keyframes tr7-scroll{
+      from{transform:translate3d(0,0,0)}
+      to{transform:translate3d(-50%,0,0)}
+    }
+    @media(max-width:640px){
+      .tr7-item{height:clamp(240px,62vw,340px)}
+    }
+    @media(prefers-reduced-motion:reduce){
+      /* mantém o carrossel rolando sozinho e SEM barra de rolagem */
+      .tr7-track{animation:tr7-scroll 44s linear infinite !important}
+      .tr7-marquee{overflow:hidden}
+    }
+  </style>
+
+  <div class="tr7-shell rv" style="--d:.3s">
+    <div class="tr7-marquee" dir="ltr" aria-label="Carrossel de resultados reais antes e depois">
+      <div class="tr7-track"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="ba-chips rv" style="--d:.4s">
+      <span>−4,8 kg na balança</span>
+      <span>− inchaço visível</span>
+      <span>7 dias de método</span>
+      <span>0 proibições</span>
+    </div>
+    <p class="ba-caption rv" style="--d:.5s">Resultados reais de quem concluiu o Desafio Reset de 7 Dias.</p>
+  </div>
+
+  <script>
+    /* ==============================================
+       TROQUE AQUI O NOME DAS 6 IMAGENS (antes+depois)
+       ============================================== */
+    const NEW_CAROUSEL_IMAGES = [
+      "img1.jpg",
+      "img2.jpg",
+      "img3.jpg",
+      "img4.jpg",
+      "img5.jpg",
+      "img6.jpeg"
+    ];
+
+    (function () {
+      if (window.__TR7_MARQUEE_READY__) return;
+
+      function init() {
+        const marquee = document.querySelector(".tr7-marquee");
+        const track = document.querySelector(".tr7-track");
+        if (!marquee || !track || !Array.isArray(NEW_CAROUSEL_IMAGES)) return;
+
+        const images = NEW_CAROUSEL_IMAGES.filter(function (s) {
+          return typeof s === "string" && s.trim() !== "";
+        });
+        if (images.length === 0) {
+          const shell = document.querySelector(".tr7-shell");
+          if (shell) shell.style.display = "none";
+          return;
+        }
+
+        window.__TR7_MARQUEE_READY__ = true;
+
+        const group = document.createElement("div");
+        group.className = "tr7-group";
+
+        images.forEach(function (src, i) {
+          const item = document.createElement("div");
+          item.className = "tr7-item";
+
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = "Resultado real — antes e depois " + (i + 1);
+          img.loading = "eager";
+          img.decoding = "async";
+          img.draggable = false;
+
+          item.appendChild(img);
+          group.appendChild(item);
+        });
+
+        const clone = group.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+
+        track.appendChild(group);
+        track.appendChild(clone);
+
+        /* velocidade constante independente da largura */
+        requestAnimationFrame(function () {
+          const half = track.scrollWidth / 2;
+          if (half > 0) track.style.animationDuration = Math.max(24, Math.round(half / 80)) + "s";
+        });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+  </script>
 </section>
 
 <div class="marquee rev" aria-hidden="true"><div class="marquee-track" id="mq2"></div></div>
@@ -693,7 +832,7 @@ footer p{max-width:56ch}
 
 <script>
 /* ════════════ EDITE AQUI: LINK DO SEU CHECKOUT ════════════ */
-const CHECKOUT_URL = "";
+const CHECKOUT_URL = "https://pay.kirvano.com/130859cb-890b-4d13-824f-b1632b155b28";
 
 /* ════════════ EDITE AQUI: OS 7 DIAS DO MÉTODO ════════════ */
 const DIAS = [
@@ -721,13 +860,13 @@ const GUIAS = [
 /* ════════════ EDITE AQUI: DEPOIMENTOS ════════════ */
 const DEPOIMENTOS = [
   {nome:"Mariana R.", meta:"34 anos • Belo Horizonte/MG", tag:"−4,6kg", foto:"https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/190f4b787-33f0-4b1b-b272-76e70aa21cf7.png",
-   texto:"Eu já tinha tentado de tudo. O que me ganhou foi a simplicidade: cada dia eu sabia exatamente o que fazer. Perdi 4,6kg e o inchaço sumiu no terceiro dia."},
+   texto:"Eu já tinha tentado um monte de coisa antes. O que eu gostei foi que era simples, cada dia eu sabia mais ou menos o que tinha que fazer. No começo achei que não ia conseguir manter, mas depois de alguns dias já tava me sentindo bem melhor e menos inchada."},
   {nome:"Carlos E.", meta:"47 anos • Recife/PE", tag:"−4,7kg", foto:"https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/1bc69f7e9-8333-4841-8388-dd341b345f57.png",
-   texto:"Achei que seria mais uma dieta chata. Mas é direto ao ponto, sem enrolação. Fiz as caminhadas, ajustei o prato e foram 4,7kg embora em uma semana."},
+   texto:"Achei que ia ser mais uma dieta chata. mas foi bem direto ao ponto, sem aquela enrolação toda. Fiz as caminhadas, dei uma ajustada no prato e no fim da semana tinha perdido 4,7kg. nem eu acreditei kkk"},
   {nome:"Juliana S.", meta:"29 anos • São Paulo/SP", tag:"−3,8kg", foto:"https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/15efaa300-65c8-4e09-a01c-16b0321c153c.png",
-   texto:"O guia do sono mudou tudo pra mim. Eu não sabia que dormir mal travava meu emagrecimento. Resultado: 3,8kg a menos e muito mais energia."},
+   texto:"O guia do sono foi uma das coisas que mais gostei. Eu nem sabia que dormir tão mal podia atrapalhar tanto. Depois que comecei a melhorar minha rotina de sono, me senti bem mais disposta e com mais energia no dia a dia."},
   {nome:"Fernanda L.", meta:"41 anos • Curitiba/PR", tag:"−4,2kg", foto:"https://image.qwenlm.ai/public_source/b62cdae9-3638-43b0-97b0-1e0c5e2ef8e5/12479fdb9-3678-44f2-92f0-41d376b472cc.png",
-   texto:"Fala de um jeito muito bom de entender. Inteligente, simples, sem terrorismo nutricional. Terminei os 7 dias, mantive a rotina e já são 4,2kg."}
+   texto:"Explica de um jeito muito facil de entender. É simples e não fica colocando medo em tudo que a gente come. Terminei os 7 dias, continuei com a rotina e já percebi bastante diferença. Gostei bastante."}
 ];
 
 /* ════════════ EDITE AQUI: PERGUNTAS FREQUENTES ════════════ */
@@ -878,39 +1017,41 @@ cards.forEach(c=>ioDay.observe(c));
 
 /* ═══════════ ANTES/DEPOIS ═══════════ */
 const baSlider = document.getElementById('baSlider');
-let baPos = 50, baDrag = false, baTouched = false;
-function baApply(){
-  baSlider.style.setProperty('--pos', baPos+'%');
-  baSlider.setAttribute('aria-valuenow', Math.round(baPos));
-}
-function baFromX(clientX){
-  const r = baSlider.getBoundingClientRect();
-  baPos = Math.max(3, Math.min(97, ((clientX - r.left)/r.width)*100));
-  baApply();
-}
-function baTouch(){ if(!baTouched){ baTouched = true; baSlider.classList.add('touched'); } }
-baSlider.addEventListener('pointerdown', e=>{ baDrag = true; baTouch(); baSlider.setPointerCapture(e.pointerId); baFromX(e.clientX); });
-baSlider.addEventListener('pointermove', e=>{ if(baDrag) baFromX(e.clientX); });
-addEventListener('pointerup', ()=>baDrag=false);
-baSlider.addEventListener('pointercancel', ()=>baDrag=false);
-baSlider.addEventListener('keydown', e=>{
-  if(e.key==='ArrowLeft'){ baTouch(); baPos = Math.max(3, baPos-4); baApply(); e.preventDefault(); }
-  if(e.key==='ArrowRight'){ baTouch(); baPos = Math.min(97, baPos+4); baApply(); e.preventDefault(); }
-});
-if(!reduced){
-  const ioBa = new IntersectionObserver(es=>es.forEach(en=>{
-    if(!en.isIntersecting || baTouched) return;
-    ioBa.unobserve(baSlider);
-    const t0 = performance.now();
-    (function sweep(t){
-      if(baTouched) return;
-      const p = Math.min(1,(t-t0)/2400);
-      baPos = 50 + Math.sin(p*Math.PI*2)*30*(1-p);
-      baApply();
-      if(p<1) requestAnimationFrame(sweep); else { baPos=50; baApply(); }
-    })(t0);
-  }),{threshold:.55});
-  ioBa.observe(baSlider);
+if (baSlider) {
+  let baPos = 50, baDrag = false, baTouched = false;
+  function baApply(){
+    baSlider.style.setProperty('--pos', baPos+'%');
+    baSlider.setAttribute('aria-valuenow', Math.round(baPos));
+  }
+  function baFromX(clientX){
+    const r = baSlider.getBoundingClientRect();
+    baPos = Math.max(3, Math.min(97, ((clientX - r.left)/r.width)*100));
+    baApply();
+  }
+  function baTouch(){ if(!baTouched){ baTouched = true; baSlider.classList.add('touched'); } }
+  baSlider.addEventListener('pointerdown', e=>{ baDrag = true; baTouch(); baSlider.setPointerCapture(e.pointerId); baFromX(e.clientX); });
+  baSlider.addEventListener('pointermove', e=>{ if(baDrag) baFromX(e.clientX); });
+  addEventListener('pointerup', ()=>baDrag=false);
+  baSlider.addEventListener('pointercancel', ()=>baDrag=false);
+  baSlider.addEventListener('keydown', e=>{
+    if(e.key==='ArrowLeft'){ baTouch(); baPos = Math.max(3, baPos-4); baApply(); e.preventDefault(); }
+    if(e.key==='ArrowRight'){ baTouch(); baPos = Math.min(97, baPos+4); baApply(); e.preventDefault(); }
+  });
+  if(!reduced){
+    const ioBa = new IntersectionObserver(es=>es.forEach(en=>{
+      if(!en.isIntersecting || baTouched) return;
+      ioBa.unobserve(baSlider);
+      const t0 = performance.now();
+      (function sweep(t){
+        if(baTouched) return;
+        const p = Math.min(1,(t-t0)/2400);
+        baPos = 50 + Math.sin(p*Math.PI*2)*30*(1-p);
+        baApply();
+        if(p<1) requestAnimationFrame(sweep); else { baPos=50; baApply(); }
+      })(t0);
+    }),{threshold:.55});
+    ioBa.observe(baSlider);
+  }
 }
 
 /* ═══════════ FAQ ═══════════ */
