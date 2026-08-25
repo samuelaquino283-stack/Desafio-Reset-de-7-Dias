@@ -15,18 +15,30 @@
 <meta property="og:type" content="product">
 <meta property="og:title" content="Desafio Reset de 7 Dias — Perca até 5kg em 7 dias">
 <meta property="og:description" content="8 guias práticos, 1 orientação por dia. Sem dietas loucas, sem passar fome, sem academia. Garantia incondicional de 7 dias.">
-<meta property="og:image" content="https://seudominio.com.br/reset-7-dias.png">
+<meta property="og:image" content="https://seudominio.com.br/reset-7-dias.jpg">
 <meta property="og:image:alt" content="Coleção de guias do Desafio Reset de 7 Dias">
 <meta property="og:locale" content="pt_BR">
 <!-- ═══ Twitter/X ═══ -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Desafio Reset de 7 Dias — Perca até 5kg em 7 dias">
 <meta name="twitter:description" content="8 guias práticos, 1 orientação por dia. Sem dietas loucas, sem passar fome, sem academia. Garantia incondicional.">
-<meta name="twitter:image" content="https://seudominio.com.br/reset-7-dias.png">
+<meta name="twitter:image" content="https://seudominio.com.br/reset-7-dias.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23170807'/%3E%3Ctext x='32' y='46' font-size='36' font-family='Arial' font-weight='bold' fill='%23E8503A' text-anchor='middle'%3E7%3C/text%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<script>
+/* Dispositivo fraco? CPU <=4 nucleos, <=4GB RAM, economia de dados ou 2G/3G.
+   Visual preservado — apenas custos de GPU/CPU invisiveis sao reduzidos. */
+try{
+  const _c = navigator.connection || {};
+  if((navigator.hardwareConcurrency||8)<=4 || (navigator.deviceMemory||8)<=4 || _c.saveData || /^(slow-)?2g|3g/.test(_c.effectiveType||'')){
+    document.documentElement.classList.add('weak');
+  }
+}catch(e){}
+</script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preload" as="image" href="reset-7-dias.png" fetchpriority="high">
+<link rel="preload" as="image" href="reset-7-dias.jpg" fetchpriority="high">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/bricolage-grotesque@latest/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/instrument-sans@latest/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/fraunces@latest/index-italic.css">
@@ -241,7 +253,7 @@ body.on .u5 path{stroke-dashoffset:0}
 
 /* ---------- marquee ---------- */
 .marquee{background:var(--ink);color:var(--cream);overflow:hidden;padding:16px 0;transform:rotate(-1deg) scale(1.02);border-top:1px solid rgba(232,80,58,.3);border-bottom:1px solid rgba(232,80,58,.3)}
-.marquee-track{display:flex;width:max-content;animation:mq 32s linear infinite}
+.marquee-track{display:flex;width:max-content;animation:mq 32s linear infinite;will-change:transform}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-track span{font-family:var(--font-display);font-weight:700;font-size:.92rem;letter-spacing:.18em;text-transform:uppercase;padding:0 26px;white-space:nowrap}
 .marquee-track span i{color:var(--blood-bright);font-style:normal;margin-right:26px}
@@ -658,6 +670,61 @@ footer{background:#120505;color:rgba(247,241,233,.55);padding:70px 0 0;font-size
 .buybar-price b{color:var(--ember);font-family:var(--font-display);font-weight:800;font-size:1.05rem}
 @media(max-width:560px){.buybar-price{margin-left:0}}
 
+/* ---------- modo dispositivo fraco (visual preservado, GPU aliviada) ---------- */
+html.weak{scroll-behavior:auto}
+/* Backdrop-filter custa por frame durante o scroll em GPU fraca — zerado em TUDO.
+   O aspecto de vidro fica preservado pelas bordas, brilho interno e fundos leitosos. */
+html.weak .topbar,html.weak header.scrolled,html.weak .buybar,html.weak .sp-toast,
+html.weak .exit-ov,html.weak .exit-card,html.weak .m-menu,html.weak .day-card,html.weak .stat,
+html.weak .t-card,html.weak .cmp.bad,html.weak .pq-yes,html.weak .faq-item.open,html.weak .step,
+html.weak .g-card,html.weak .vstack,html.weak .offer-card,html.weak .cdbox,html.weak .g-tag,
+html.weak .trust-badge,html.weak .pay-pill,html.weak .tile,html.weak .float-chip{backdrop-filter:none;-webkit-backdrop-filter:none}
+/* Compensação de opacidade (mesma leitura visual) */
+html.weak .topbar{background:rgba(18,5,5,.97)}
+html.weak header.scrolled{background:rgba(247,241,233,.97)}
+html.weak .buybar{background:rgba(22,6,6,.96)}
+html.weak .sp-toast{background:rgba(255,255,255,.97)}
+html.weak .day-card,html.weak .stat,html.weak .t-card{background:rgba(255,255,255,.92)}
+html.weak .cmp.bad{background:rgba(255,255,255,.88)}
+html.weak .pq-yes{background:rgba(255,255,255,.9)}
+html.weak .faq-item.open{background:rgba(255,255,255,.9)}
+html.weak .step,html.weak .g-card{background:rgba(247,241,233,.14)}
+html.weak .vstack{background:rgba(23,8,7,.66)}
+html.weak .offer-card{background:linear-gradient(165deg,rgba(58,18,16,.96),rgba(26,7,6,.97))}
+html.weak .cdbox{background:linear-gradient(180deg,#3A1210,#1D0807)}
+html.weak .exit-card{background:radial-gradient(600px 320px at 85% 0%,rgba(196,39,27,.3),transparent 60%),rgba(32,10,9,.97)}
+html.weak .m-menu{background:radial-gradient(700px 420px at 85% 15%,rgba(196,39,27,.3),transparent 60%),#1A0807}
+html.weak .float-chip{background:rgba(23,8,7,.95)}
+html.weak .trust-badge{background:rgba(247,241,233,.13)}
+/* Grain removido (camada full-screen por frame) e blur estático reduzido */
+html.weak body::after{display:none}
+html.weak .hero-glow{filter:blur(24px)}
+/* Micro-animações contínuas pausadas: kenburns reescala textura de 1024px a todo frame */
+html.weak .stack-img,html.weak .stack-wrap,html.weak .float-chip,html.weak .ghost,html.weak .seal-wrap::before{animation:none}
+
+/* ---------- ajustes mobile universais (correções de layout real) ---------- */
+@media(max-width:420px){
+  .offer-right{padding:30px 18px 28px}
+  .offer-right .cd-wrap{gap:8px;flex-wrap:wrap}
+  .offer-right .cdbox{min-width:64px;padding:12px 4px 10px;border-radius:12px}
+  .offer-right .cdbox b{font-size:1.7rem}
+  .offer-right .cdbox label{font-size:.52rem;letter-spacing:.14em;margin-top:6px}
+  .offer-right .cd-colon{font-size:1.1rem}
+  .offer-right .btn{padding:18px 24px;font-size:.9rem}
+  .exit-card{padding:34px 22px 30px}
+  .exit-card h3{font-size:1.3rem}
+}
+@media(max-width:380px){
+  .topbar{gap:8px;padding:0 8px}
+  .tb-txt{font-size:.55rem;letter-spacing:.05em}
+  .tb-bar{width:34px}
+  .tiles{gap:2px}
+  .tiles i{font-size:.62rem}
+  .tile{padding:2px 4px;border-radius:5px}
+  .tile b{font-size:.68rem}
+}
+@media(max-width:360px){.avatar-cluster{flex-wrap:wrap}}
+
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
@@ -677,7 +744,7 @@ footer{background:#120505;color:rgba(247,241,233,.55);padding:70px 0 0;font-size
       "@type":"Product",
       "name":"Desafio Reset de 7 Dias",
       "description":"8 guias práticos em PDF: uma orientação por dia para perder até 5kg em 7 dias, sem dietas restritivas e sem academia.",
-      "image":["reset-7-dias.png"],
+      "image":["reset-7-dias.jpg"],
       "brand":{"@type":"Brand","name":"RESET·7"},
       "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"3412","bestRating":"5"},
       "offers":{
@@ -807,7 +874,7 @@ try{
       <div class="hero-glow"></div>
       <div class="float-chip chip-a">−5kg<small>em 7 dias</small></div>
       <div class="float-chip chip-b">8 guias<small>1 orientação por dia</small></div>
-      <div class="stack-wrap"><img class="stack-img" src="reset-7-dias.png" alt="Coleção de guias do Desafio Reset de 7 Dias" width="1024" height="1535" fetchpriority="high" decoding="async"></div>
+      <div class="stack-wrap"><img class="stack-img" src="reset-7-dias.jpg" alt="Coleção de guias do Desafio Reset de 7 Dias" width="1024" height="1535" fetchpriority="high" decoding="async"></div>
     </div>
   </div>
   <a href="#metodo" class="scroll-cue"><span>Descubra</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
@@ -1010,7 +1077,7 @@ try{
 
     <div class="offer-card rv" style="--d:.3s">
       <div class="offer-left">
-        <div class="offer-thumb"><img src="reset-7-dias.png" alt="Guias do Desafio Reset de 7 Dias" width="1024" height="1535" loading="lazy" decoding="async"></div>
+        <div class="offer-thumb"><img src="reset-7-dias.jpg" alt="Guias do Desafio Reset de 7 Dias" width="1024" height="1535" loading="lazy" decoding="async"></div>
         <h3>Desafio Reset de 7 Dias</h3>
         <span class="ol-sub">8 guias completos em PDF</span>
         <ul class="offer-includes" id="offerIncludes"></ul>
@@ -1517,12 +1584,17 @@ const sProg = document.getElementById('sProg');
 const toTop = document.getElementById('toTop');
 let ofertaVisible = false;
 new IntersectionObserver(es=>es.forEach(e=>ofertaVisible=e.isIntersecting),{threshold:.2}).observe(document.getElementById('oferta'));
+let scrollTicking = false;
 addEventListener('scroll',()=>{
-  header.classList.toggle('scrolled', scrollY>10);
-  buybar.classList.toggle('show', scrollY>700 && !ofertaVisible);
-  toTop.classList.toggle('show', scrollY>1400);
-  const h = document.documentElement.scrollHeight - innerHeight;
-  sProg.style.width = (h>0 ? (scrollY/h)*100 : 0)+'%';
+  if(scrollTicking) return; scrollTicking = true;
+  requestAnimationFrame(()=>{
+    header.classList.toggle('scrolled', scrollY>10);
+    buybar.classList.toggle('show', scrollY>700 && !ofertaVisible);
+    toTop.classList.toggle('show', scrollY>1400);
+    const h = document.documentElement.scrollHeight - innerHeight;
+    sProg.style.width = (h>0 ? (scrollY/h)*100 : 0)+'%';
+    scrollTicking = false;
+  });
 },{passive:true});
 toTop.addEventListener('click',()=>scrollTo({top:0,behavior:reduced?'auto':'smooth'}));
 
@@ -1620,33 +1692,51 @@ if(!reduced){
 /* ═══════════ TILT 3D ═══════════ */
 if(matchMedia('(pointer:fine)').matches && !reduced){
   document.querySelectorAll('.g-card,.t-card,.stat,.step').forEach(el=>{
+    let raf=null, cx=0, cy=0;
     el.addEventListener('mousemove',e=>{
       const r = el.getBoundingClientRect();
-      const x = (e.clientX-r.left)/r.width - .5;
-      const y = (e.clientY-r.top)/r.height - .5;
-      el.style.transform = `perspective(750px) rotateX(${(-y*7).toFixed(2)}deg) rotateY(${(x*7).toFixed(2)}deg) translateY(-6px)`;
+      cx = (e.clientX-r.left)/r.width - .5;
+      cy = (e.clientY-r.top)/r.height - .5;
+      if(raf) return;
+      raf = requestAnimationFrame(()=>{
+        el.style.transform = `perspective(750px) rotateX(${(-cy*7).toFixed(2)}deg) rotateY(${(cx*7).toFixed(2)}deg) translateY(-6px)`;
+        raf = null;
+      });
     });
-    el.addEventListener('mouseleave',()=>{ el.style.transform=''; });
+    el.addEventListener('mouseleave',()=>{ if(raf){cancelAnimationFrame(raf);raf=null;} el.style.transform=''; });
   });
   document.querySelectorAll('.btn-primary').forEach(btn=>{
+    let raf=null, tx=0, ty=0;
     btn.addEventListener('mousemove',e=>{
       const r = btn.getBoundingClientRect();
-      const x = (e.clientX-r.left-r.width/2)/r.width, y = (e.clientY-r.top-r.height/2)/r.height;
-      btn.style.transform = `translate(${x*8}px,${y*6}px)`;
+      tx = (e.clientX-r.left-r.width/2)/r.width; ty = (e.clientY-r.top-r.height/2)/r.height;
+      if(raf) return;
+      raf = requestAnimationFrame(()=>{
+        btn.style.transform = `translate(${tx*8}px,${ty*6}px)`;
+        raf = null;
+      });
     });
-    btn.addEventListener('mouseleave',()=>btn.style.transform='');
+    btn.addEventListener('mouseleave',()=>{ if(raf){cancelAnimationFrame(raf);raf=null;} btn.style.transform=''; });
   });
 }
 
 /* ═══════════ CURSOR ═══════════ */
 if(matchMedia('(pointer:fine)').matches && !reduced){
   const dot = document.getElementById('curDot'), ring = document.getElementById('curRing');
-  let mx=0,my=0,rx=0,ry=0;
+  let mx=0,my=0,rx=0,ry=0,moving=true;
   document.body.classList.add('cur-on');
-  addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; dot.style.transform=`translate(${mx}px,${my}px)`; });
+  addEventListener('mousemove',e=>{
+    mx=e.clientX; my=e.clientY;
+    dot.style.transform=`translate(${mx}px,${my}px)`;
+    moving=true;
+  });
   (function loop(){
-    rx += (mx-rx)*.16; ry += (my-ry)*.16;
-    ring.style.transform = `translate(${rx}px,${ry}px)`;
+    const dx = mx-rx, dy = my-ry;
+    if(moving || Math.abs(dx)>.3 || Math.abs(dy)>.3){
+      rx += dx*.16; ry += dy*.16;
+      ring.style.transform = `translate(${rx}px,${ry}px)`;
+      moving = false;
+    }
     requestAnimationFrame(loop);
   })();
   document.querySelectorAll('a,button,.ba-slider,.faq-q').forEach(el=>{
@@ -1659,9 +1749,20 @@ if(matchMedia('(pointer:fine)').matches && !reduced){
 const yearEl = document.getElementById('footYear');
 if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-/* ═══════════ EMBERS (fagulhas) ═══════════ */
+/* ═══════════ EMBERS (fagulhas) — sprite pré-renderizado (rápido em qualquer GPU) ═══════════ */
+function makeSparkSprite(col){
+  const s = document.createElement('canvas'); s.width = s.height = 32;
+  const g = s.getContext('2d');
+  const grd = g.createRadialGradient(16,16,0,16,16,16);
+  grd.addColorStop(0,'rgba(255,255,255,.95)');
+  grd.addColorStop(.3,`rgba(${col},.85)`);
+  grd.addColorStop(1,`rgba(${col},0)`);
+  g.fillStyle = grd; g.fillRect(0,0,32,32);
+  return s;
+}
 function Embers(canvas, count){
   const ctx = canvas.getContext('2d');
+  const sprWarm = makeSparkSprite('255,122,80'), sprCool = makeSparkSprite('232,80,58');
   let W,H,ps=[],running=false,raf;
   function resize(){
     W = canvas.width = canvas.offsetWidth;
@@ -1674,18 +1775,16 @@ function Embers(canvas, count){
   }
   function step(){
     ctx.clearRect(0,0,W,H);
-    ps.forEach((p,i)=>{
+    for(let i=0;i<ps.length;i++){
+      const p = ps[i];
       p.y -= p.vy; p.x += p.vx + Math.sin(p.ph+=.02)*.3;
       p.a = Math.min(p.max, p.a+.008);
       if(p.y < -12) ps[i] = spawn(false);
-      const col = p.warm ? '255,122,80' : '232,80,58';
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle = `rgba(${col},${p.a})`;
-      ctx.shadowColor = `rgba(${col},.8)`;
-      ctx.shadowBlur = 8;
-      ctx.fill();
-    });
+      const s = p.r*6;
+      ctx.globalAlpha = p.a;
+      ctx.drawImage(p.warm?sprWarm:sprCool, p.x-s/2, p.y-s/2, s, s);
+    }
+    ctx.globalAlpha = 1;
     raf = requestAnimationFrame(step);
   }
   resize(); addEventListener('resize', resize);
@@ -1696,8 +1795,9 @@ function Embers(canvas, count){
   }),{threshold:.05}).observe(canvas);
 }
 if(!reduced){
-  Embers(document.getElementById('embersHero'), 26);
-  Embers(document.getElementById('embersOferta'), 34);
+  const sparkMul = document.documentElement.classList.contains('weak') ? .45 : 1;
+  Embers(document.getElementById('embersHero'), Math.round(26*sparkMul));
+  Embers(document.getElementById('embersOferta'), Math.round(34*sparkMul));
 }
 </script>
 </body>
